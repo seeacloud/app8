@@ -3,12 +3,16 @@
       <div v-for="(item, index) in items" class="news-item" :key="index">
         <h2 class="news-title">{{item.title}}</h2>
         <span class="author">发布者： {{item.author}} 发布时间： {{item.time}}</span>
-        <img :src="'./static/img/'+item.img" alt="" class="thumb-img">
-        <p class="news-content">{{item.content}}</p>
-        <!--<a :href="item.url" class="a-more">了解详情</a>-->
-        <!--<router-link to="'/archive/'+id">了解详情</router-link>-->
-        <!--<router-link :to="{ name: 'archives', params: { id: item.id }}">了解详情</router-link>-->
-        <router-link :to="'/archives/'+item.id">了解详情</router-link>
+
+        <div class="content-wrap">
+          <div class="thumb-wrap">
+            <img :src="'./static/img/'+item.img" alt="" class="thumb-img">
+
+          </div>
+          <p class="news-content">{{item.content}}</p>
+          <router-link :to="'/archives/'+item.id" class="a-btn">了解详情</router-link>
+        </div>
+
       </div>
     </div>
 </template>
@@ -32,10 +36,39 @@
   @import "../../../static/article.css";
 @import "../../../static/base";
 
+  .content-wrap
+  {
+    position: relative;
+    padding-left: 220px;
+    height: 120px;
+  }
+
+  .thumb-wrap
+  {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left:0;
+    top:0;
+    overflow: hidden;
+    img
+    {
+      height: 100%;
+    }
+  }
   .thumb-img
   {
-    width: 100%;
-    margin: 20px 0;
+
+  }
+
+  .a-btn
+  {
+    font-size: 12px;
+    color: $yellow;
+  }
+  .a-btn:hover
+  {
+    color: $yellow;
   }
 
   .news-item
@@ -62,6 +95,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #666;
+    text-align: justify;
   }
 
   .a-more

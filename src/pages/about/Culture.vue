@@ -1,6 +1,8 @@
 <template>
-    <div>
-      <h1>公司文化活动</h1>
+    <div class="article-con">
+      <h1 class="article-title">公司文化活动</h1>
+
+
     </div>
 </template>
 
@@ -13,4 +15,9 @@
 </script>
 
 <style lang='scss' scoped>
+  @import "../../../static/article.css";
+  @import "../../../static/base.scss";
+
+
+
 </style>

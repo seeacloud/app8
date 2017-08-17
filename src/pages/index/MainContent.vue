@@ -302,10 +302,8 @@
           {title:'人力资源管理系统',name:'hr'}
         ],
         bandrows: [
-          [{url: 'baijc.png'}, {url: 'guanz.png'}, {url: 'hongjdl.png'}, {url: 'huaw.jpg'},
-            {url: 'kingdee.jpg'}, {url: 'wank.jpg'}],
-          [{url: 'boshi.jpg'}, {url: 'antong.jpg'}, {url: 'zhoudf.jpg'}, {url: 'szair.jpg'},
-            {url: 'ruantdl.jpg'}, {url: 'ytg.jpg'}]
+          [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'},{url: 'wank.jpg'},{url: 'baijc.png'}, {url: 'guanz.png'}, {url: 'hongjdl.png'}, ],
+          [{url: 'szair.jpg'},{url: 'antong.jpg'}, {url: 'ytg.jpg'},{url: 'boshi.jpg'}, {url: 'zhoudf.jpg'},  {url: 'ruantdl.jpg'}]
 //            [{url:''},{url:''},{url:''},{url:''},{url:''},{url:''}],
 
         ]

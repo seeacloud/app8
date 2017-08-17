@@ -36,7 +36,7 @@
     position: fixed;
     right: -160px;
     width: 200px;
-    top: 60%;
+    top: 70%;
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);

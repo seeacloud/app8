@@ -47,7 +47,8 @@
     position: relative;
     display: block;
     border-bottom: 1px solid #ddd;
-    padding: 18px 15px;
+    padding: 12px 15px;
+    font-size:14px;
 
     i
     {

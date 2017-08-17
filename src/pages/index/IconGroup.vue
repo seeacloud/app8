@@ -36,7 +36,7 @@
         <div class="icon-item no-bdr">
           <a href="http://www.sinqx.com" target="_blank">
           <div class="img-wrap">
-            <img src="../../../static/img/kingdee.png" alt=""/>
+            <img src="../../../static/img/xinqx-logo.jpg" alt=""/>
           </div>
           <h4 class="title">新企学</h4>
           </a>
@@ -123,11 +123,11 @@
 
   .iconfont {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 130px;
     background: #dddddd;
     text-align: center;
-    line-height: 170px;
+    line-height: 140px;
     font-size: 80px;
     border-radius: 50%;
     color: #ffffff;
@@ -140,17 +140,21 @@
   }
 
   .img-wrap {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     display: inline-block;
+    img
+    {
+      width: 100%;
+    }
   }
 
   i.icon-earth {
     background: none;
-    font-size: 150px;
-    line-height: 150px;
+    font-size: 120px;
+    line-height: 120px;
     color: deepskyblue;
   }
 
