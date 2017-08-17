@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../../static/common.css"/>
+
+</head>
+<body style="background:#eee;">
+
+<div id="app">
+  <header-item></header-item>
+  <banner title="客户案例" url="./static/img/building.png"></banner>
+  <control-bar></control-bar>
+
+
+  <div class="main-container" style="margin-top:40px;">
+    <div class="main-inner">
+      <el-row :gutter="30">
+        <el-col :span="5">
+          <div class="grid-content">
+            <side-menu headtitle="客户案例" :links="linkary"></side-menu>
+          </div>
+        </el-col>
+        <el-col :span="19">
+          <div class="grid-content">
+            <router-view></router-view>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
+
+
+  <footer-item></footer-item>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, p, div, span, a, ul, li, table, th, td, tr {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;}
+
+a
+{
+  color: #000;
+
+}
+a:visited
+{
+  color: #000000;
+}
+
+.main-container
+{
+  display: block;
+}
+.main-inner
+{
+  width: 75%;
+  min-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+}

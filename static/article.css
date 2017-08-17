@@ -1,0 +1,97 @@
+.article-title
+{
+  text-align: center;
+  font-size: 36px;
+}
+
+.article-con
+{
+  background: #fff;
+  padding: 40px 60px 60px 60px;
+  -webkit-box-shadow:  1px 1px 20px #ccc;
+  -moz-box-shadow:  1px 1px 20px #ccc;
+  box-shadow:  1px 1px 20px #ccc;
+}
+
+.p-article
+{
+  font-size: 18px;
+  line-height: 1.8em;
+  text-indent: 30px;
+  text-align: justify;
+  color: #666;
+}
+
+
+.intro-sec img
+{
+  width: 100%;
+}
+.intro-sec
+{
+  overflow: hidden;
+  display: block;
+}
+
+.sec-cell
+{
+  width: 50%;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.sec-cell p
+{
+  line-height: 1.8em;
+  font-size: 18px;
+  color: #666;
+}
+
+.full-sec
+{
+  position: relative;
+}
+
+.full-sec img
+{
+  width: 100%;
+}
+
+.full-sec-intro
+{
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  -webkit-transform: translate(0 , -50%);
+  -moz-transform: translate(0 , -50%);
+  -ms-transform: translate(0 , -50%);
+  -o-transform: translate(0 , -50%);
+  transform: translate(0 , -50%);
+}
+.h2-full-sec
+{
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+
+.p-full-sec
+{
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+
+
+.header-page
+{
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.title-page
+{
+  margin: 0;
+}

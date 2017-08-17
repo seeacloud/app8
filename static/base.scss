@@ -1,0 +1,36 @@
+$yellow:#EC6600;
+$blue:#3c84fb;
+$green:#85C34A;
+$red:#E03E3E;
+$lightgreen:#6ED19C;
+$lightblue:#5995f8;
+
+
+
+
+.round-btn
+{
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  border: 1px solid $yellow;
+  color: $yellow;
+}
+.round-btn:hover
+{
+  background: $yellow;
+  color: #fff;
+}
+
+.round-btn-white
+{
+  color: #fff;
+  border: 1px solid #fff;
+}
+.round-btn-white:hover
+{
+  border: 1px solid $yellow;
+}
+

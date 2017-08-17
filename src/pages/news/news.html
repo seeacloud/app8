@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../../static/common.css"/>
+
+</head>
+<body>
+<div id="app">
+  <header-item activeitem='about'></header-item>
+
+
+  <banner url="./static/img/building.png" title="公司动态"></banner>
+
+  <div class="main-container">
+    <div class="main-inner">
+      <el-row :gutter="30">
+        <el-col :span="18">
+          <div class="grid-content">
+            <!--<news></news>-->
+
+            <router-view>
+
+            </router-view>
+          </div>
+        </el-col>
+
+        <el-col :span="6">
+          <div class="grid-content">
+            <right-menu></right-menu>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
+
+
+
+  <control-bar></control-bar>
+  <footer-item></footer-item>
+
+</div>
+
+</body>
+</html>
