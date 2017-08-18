@@ -14,6 +14,7 @@ import ControlBar from '../../components/ControlBar.vue'
 import Clients from './Clients.vue'
 import CaseGroup from './CaseGroup.vue'
 import Evaluation from './Evaluation'
+import CaseDetail from './CaseDetail.vue'
 
 
 Vue.use(ElementUI)
@@ -22,7 +23,8 @@ Vue.use(Router)
 const routes=[
   {path:'/',name:'Clients', component:Clients},
   {path:'/case',name:'CaseGroup',component:CaseGroup},
-  {path:'/evaluation',name:'Evaluation', component:Evaluation}
+  {path:'/evaluation',name:'Evaluation', component:Evaluation},
+  {path:'/casedetail',component:CaseDetail}
 ]
 
 
@@ -33,7 +35,7 @@ const router=new Router({
 new Vue({
   el:'#app',
   router,
-  components:{HeaderItem, FooterItem, Banner,SideMenu, ControlBar, Clients, CaseGroup, Evaluation},
+  components:{HeaderItem, FooterItem, Banner,SideMenu, ControlBar, Clients, CaseGroup, Evaluation,CaseDetail},
   data:{
     linkary:[
       {title:'合作客户',url:'/'},

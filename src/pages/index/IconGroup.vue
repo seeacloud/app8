@@ -8,7 +8,7 @@
 
       <div class="icon-row">
         <div class="icon-item">
-          <a href="">
+          <a href="products.html" target="_self">
           <i class="iconfont icon-earth">&#xe6d3;</i>
           <h4 class="title">互联网产品研发</h4>
           </a>
@@ -42,27 +42,6 @@
           </a>
         </div>
       </div>
-      <!--<el-row class="content-row">-->
-
-        <!--<el-col :span="6" class="icon-item">-->
-          <!--<div class="img-wrap">-->
-            <!--<img src="../../../static/img/kingdee.png" alt=""/>-->
-          <!--</div>-->
-          <!--<h4 class="title">金蝶EAS平台开发</h4>-->
-        <!--</el-col>-->
-        <!--<el-col :span="6" class="icon-item">-->
-          <!--<i class="iconfont" style="background:#f16557;">&#xe61b;</i>-->
-          <!--<h4 class="title">软件定制开发</h4>-->
-        <!--</el-col>-->
-        <!--<el-col :span="6" class="icon-item">-->
-          <!--<i class="iconfont icon-earth">&#xe6d3;</i>-->
-          <!--<h4 class="title">互联网产品研发</h4>-->
-        <!--</el-col>-->
-        <!--<el-col :span="6" class="icon-item no-bdr">-->
-          <!--<i class="iconfont" style="background:#2cca71;">&#xe614;</i>-->
-          <!--<h4 class="title">IT人力资源服务</h4>-->
-        <!--</el-col>-->
-      <!--</el-row>-->
     </div>
   </div>
 </template>
@@ -116,15 +95,22 @@
     display:inline-block;
   width:19%;
   float:left;
+  font-size:0;
+  line-height:0;
+
   a:hover
   {
     color: $yellow;
+    .title
+    {
+      color: inherit;
+    }
   }
 
   .iconfont {
     display: inline-block;
     width: 120px;
-    height: 130px;
+    height: 120px;
     background: #dddddd;
     text-align: center;
     line-height: 140px;
@@ -133,7 +119,7 @@
     color: #ffffff;
   }
 
-  title {
+  .title {
     font-size: 18px;
     font-weight: normal;
     color: #333333;
@@ -145,6 +131,7 @@
     border-radius: 50%;
     overflow: hidden;
     display: inline-block;
+  font-size:0;
     img
     {
       width: 100%;

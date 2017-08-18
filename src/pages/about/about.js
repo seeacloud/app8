@@ -41,7 +41,9 @@ new Vue({
   components:{HeaderItem, FooterItem, Banner,SideMenu, ControlBar, Glory, Culture},
   data:{
     linkary:[
-      {title:'莫亚简介',url:'/'},
+      {title:'莫亚概况',url:'/'},
+      {title:'公司荣誉',url:'/glory'},
+      {title:'公司文化活动',url:'/culture'},
       {title:'联系我们',url:'/contact'}
 
     ]

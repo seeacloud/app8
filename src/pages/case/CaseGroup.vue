@@ -18,6 +18,7 @@
     export default {
         data (){
           return {
+              scrollWatch:true,
               cases:[
                 {imgurl:'t-1.jpg',title:'招商局产权管理系统',
                   des:'招商局集团(简称招商局)是国家驻港大型企业集团，经营总部设于香港，业务主要分布于香港、内地、东南亚等极具活力和潜力的新兴市场。截至2012年底，招商局集团拥有总资产3920.83亿元(以下单位，未经注明均为人民币)，管理总资产3.59万亿元。2012年，招商局集团保持平稳增长，盈利水平创历史新高，利润总额263.15 亿元，母公司净利润146.22亿元，集团利润总额在各央企中排名列第10位。招商局是中央直接管理的国有重要骨干企业，亦被列为香港四大中资企业之一。2004-2011年招商局连续八年获国务院国资委评为A级中央企业。在2004-2006年和2007-2009年任期考核中，招商局连续两次获国务院国资委授予“业绩优秀企业”称号。',url:'http://www.shanmt.com'},
@@ -28,7 +29,13 @@
               ]
           }
         },
-      components:{CaseCell}
+      components:{CaseCell},
+      mounted:function () {
+        window.scrollTo(0,0)
+      },
+      destroyed:function () {
+        this.scrollWatch=false
+      }
         }
 </script>
 

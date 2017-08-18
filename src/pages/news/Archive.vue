@@ -13,7 +13,7 @@
 
       <p class="news-content">深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供便捷的服务；秉承快速反应、激情工作、质量第一的宗旨，为客户的信息化建设提供优质的服务。倡导“高质量产品、高效率服务”的企业工作文化。</p>
 
-      <router-link to="/" class="back-btn"><< 返回</router-link>
+      <router-link to="/" class="back-btn">返回</router-link>
     </div>
 </template>
 
@@ -59,11 +59,10 @@
   .back-btn
   {
     font-size: 12px;
-    border: 1px solid $yellow;
-    padding: 5px 10px;
     color: $yellow;
     margin-top: 20px;
     display: inline-block;
+    padding: 2px;
 
   }
   .back-btn:hover

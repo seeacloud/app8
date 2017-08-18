@@ -2,12 +2,12 @@
   <div class="con">
     <el-row v-for="(itemrow, index) in itemrows" :gutter="20" :key="index">
       <el-col :span="6" v-for="(item, index) in itemrow" :key="index">
-        <a class="s-card">
+        <router-link to="/solutionDetail" class="s-card">
           <div class="s-img-wrap">
             <img :src="'./static/img/'+item.url" alt=""/>
           </div>
           <h3 class="card-title">{{item.title}}</h3>
-        </a>
+        </router-link>
 
       </el-col>
     </el-row>
@@ -30,6 +30,7 @@
          }
     },
     mounted:function () {
+        window.scrollTo(0,0)
       let wraps=document.querySelectorAll('.s-img-wrap')
       console.log('wraps are:',wraps.length)
       wraps.forEach(function (item) {

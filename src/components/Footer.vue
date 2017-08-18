@@ -33,9 +33,9 @@
         </el-col>
         <el-col :span="4">
           <h2>产品与服务</h2>
+          <a href="http://www.shanmt.com">山木通系列产品</a>
           <a href="">互联网产品研发</a>
           <a href="">金蝶系产品实施开发</a>
-          <a href="http://www.shanmt.com">山木通系列产品</a>
           <a href="">软件定制开发</a>
           <a href="">物流行业产品</a>
           <a href="">IT人力资源服务</a>

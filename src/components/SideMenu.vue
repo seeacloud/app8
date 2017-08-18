@@ -25,6 +25,7 @@
 
 
 <style lang="scss" scoped="true">
+  @import "../../static/base.scss";
   $yellow: #ec6600;
 
   .menu-head
@@ -46,9 +47,10 @@
   .menu-item {
     position: relative;
     display: block;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
     padding: 12px 15px;
     font-size:14px;
+  color:#666;
 
     i
     {

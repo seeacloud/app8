@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
   <style>
+
 
     .menu-head
     {
@@ -27,7 +27,9 @@
       display: block;
       border-bottom: 1px solid #ddd;
       padding: 12px 15px;
-      font-size: 14px;
+      font-size:14px;
+    background:#fff;
+
 
     }
     .menu-item i
@@ -50,25 +52,35 @@
       color: #fff;
 
     }
-
     .menu-item:hover i
     {
       color: #fff;
     }
     .menu-item:last-child
     {
-      border: none;
+      border-bottom: none;
     }
 
     .no-bdr {
       border: none;
     }
+    .bdr-top
+    {
+      border-top: 1px solid #ddd;
+    }
+    .shadow
+    {
+      -webkit-box-shadow:  1px 1px 10px #ccc;
+      -moz-box-shadow:  1px 1px 10px #ccc;
+      box-shadow:  1px 1px 10px #ccc;
+    }
   </style>
+
 </head>
 <body style="background:#eee;">
 <div id="app">
   <header-item></header-item>
-  <banner title="莫亚概况" url="./static/img/building.png"></banner>
+  <banner title="关于莫亚" url="./static/img/banner-wolf.jpg"></banner>
 
   <control-bar></control-bar>
 
@@ -79,6 +91,14 @@
 
         <el-col :span="5">
           <div class="grid-content">
+            <!--<side-menu headtitle="关于莫亚" :links="linkary"></side-menu>-->
+
+            <!--<a href="news.html" target="_self" class="menu-item bdr-top" style="display:none;" id="a-news">-->
+              <!--<div >-->
+                <!--公司动态<i class="el-icon-arrow-right"></i>-->
+              <!--</div>-->
+            <!--</a>-->
+
             <!--<side-menu headtitle="关于莫亚" :links="linkary"></side-menu>-->
             <div class="container">
               <div class="menu-head">
@@ -105,7 +125,7 @@
                   联系我们<i class="el-icon-arrow-right"></i>
                 </div>
               </router-link>
-              <a href="news.html" target="_blank" class="menu-item">公司动态<i class="el-icon-arrow-right"></i></a>
+              <a href="news.html" target="_self" class="menu-item">公司动态<i class="el-icon-arrow-right"></i></a>
 
             </div>
           </div>
@@ -125,5 +145,14 @@
   <footer-item></footer-item>
 </div>
 
+
+<!--<script lang="javascript">-->
+  <!--var newsLink=document.getElementById('a-news')-->
+  <!--console.log(newsLink)-->
+  <!--window.onload=function () {-->
+      <!--console.log('wndow.onload...')-->
+    <!--newsLink.style.display="block"-->
+  <!--}-->
+<!--</script>-->
 </body>
 </html>

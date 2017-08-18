@@ -3,7 +3,8 @@
       <div class="c-cell" >
         <h4 class="c-title">{{caseinfo.title}}</h4>
         <p class="p-des">{{caseinfo.des}}</p>
-        <a class="a-more" v-bind:href="caseinfo.url" target="_blank">了解详情</a>
+        <router-link to="/casedetail" class="a-more">了解详情</router-link>
+        <!--<a class="a-more" v-bind:href="caseinfo.url" target="_blank">了解详情</a>-->
 
         <div class="img-wrap">
           <img :src="basepath+caseinfo.imgurl" alt=""/>
@@ -66,9 +67,8 @@
     position: absolute;
     bottom: 20px;
     left: 140px;
-    border: 1px solid $yellow;
     font-size: .8em;
-    padding: 5px 15px;
+    padding: 2px;
     font-size: .8em;
     color: $yellow;
 
