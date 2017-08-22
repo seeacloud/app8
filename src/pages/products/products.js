@@ -47,3 +47,64 @@ new Vue({
     ]
   }
 })
+let sMenu=document.querySelector('#side-menu')
+let mWid=document.querySelector('#side-menu').offsetWidth
+
+console.log('mWid is:',mWid)
+
+window.onscroll=function () {
+  var sTop=document.documentElement.scrollTop || document.body.scrollTop
+  // console.log('sTop is:',sTop)
+
+  function hasClass(cla, el) {
+    if(el.className.trim().length===0) return false
+    let allClass=el.className.trim().split(' ')
+    return allClass.indexOf(cla)>-1
+
+  }
+
+  function addClass(cla,el) {
+    if(!hasClass(cla,el))
+    {
+      if(el.setAttribute)
+      {
+        el.setAttribute('class',el.getAttribute('class')+' '+cla)
+      }
+      else {
+        el.className=el.className+' ' +cla
+      }
+    }
+  }
+
+  function delClass(cla,el) {
+    if(hasClass(cla,el))
+    {
+      if(el.setAttribute)
+      {
+        el.setAttribute('class',el.getAttribute('class').replace(cla,''))
+      }else{
+        el.className=el.className.replace(cla,'')
+      }
+    }
+
+  }
+
+  if(sTop<400)
+  {
+    // delClass('con-fixed',sMenu)
+  }
+
+  if(sTop>=400)
+  {
+
+    // console.log('class name is:', sMenu.className)
+    // if(!hasClass('con-fixed',sMenu))
+    // {
+    //   addClass('con-fixed',sMenu)
+    //   sMenu.style.width=mWid+'px'
+    // }
+  }
+
+}
+
+// sTop = document.documentElement.scrollTop || document.body.scrollTop;

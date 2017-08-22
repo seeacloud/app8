@@ -2,9 +2,8 @@
   <el-carousel arrow="always" height="520px" :interval=1000000>
     <el-carousel-item v-for="(item, index) in items" :key="index">
       <div  class="s-item">
-        <img :src="item.url" alt=""/>
-
-        <div class="caption">
+        <img :src="item.url" alt="" class="s-img">
+        <div class="caption" :class="{cleft : item.captionLeft}">
           <div class="content">
             <img :src="item.iconurl" alt="" class="caption-icon">
             <h1>{{item.title}}</h1>
@@ -13,9 +12,7 @@
               <a class="round-btn round-btn-white" @click="openLink(item.link)">{{item.btn}}</a>
             </div>
           </div>
-
         </div>
-
       </div>
     </el-carousel-item>
   </el-carousel>
@@ -26,12 +23,12 @@
     data (){
       return {
           items:[
-            {url:'./static/img/carpenter.jpg',iconurl:'./static/img/smticon.png', title:'山木通 云平台',
+            {url:'./static/img/smt-banner.jpg', title:'山木通 云平台',
               des:'山木通是国内第一款专门为木业加工及家具制造企业量身定制的全流程管控软件，让您轻松管理生产、库存、销售、订单、资金等各个环节。',
-              btn:'了解更多',link:'http://www.shanmt.com'},
-            {url:'./static/img/t-1.jpg',title:'金蝶开发实施',des:'dddd',btn:'bbbbbb'},
-            {url:'./static/img/t-1.jpg',title:'软件定制开发',des:'dddd',btn:'bbbbbb'},
-            {url:'./static/img/t-2.jpg',title:'新企学培训',des:'dddd',btn:'bbbbbb'}
+              btn:'了解更多',link:'http://www.shanmt.com',captionLeft:true},
+            {url:'./static/img/kingdeeDev.jpg',title:'金蝶系产品实施开发',des:'莫亚科技是金蝶集团金牌合作伙伴，在金蝶系产品的实施与开发方面有着丰富的经验',btn:'了解详情', captionLeft:true},
+            {url:'./static/img/dev-banner.jpg',title:'软件定制开发',des:'莫亚科技专业从事企业软件定制开发和技术服务，经过多年的发展，积累了众多不同行业的管理方式和经验',btn:'了解详情', captionLeft:true},
+            {url:'./static/img/sinqx.jpg',title:'新企学IT培训',des:'所学课程都是按市场及企业需求量身定制，志在提升学员的实践能力，培养高端的IT人才',btn:'了解详情', captionLeft:true}
 
           ]
       }
@@ -54,9 +51,21 @@
     position: relative;
     height: 100%;
   }
+
+  .s-img
+  {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+  }
   .caption
   {
-    background: rgba(0,0,0,.6);
+    /*background: rgba(0,0,0,.6);*/
     position: absolute;
     width: 100%;
     height: 100%;
@@ -76,7 +85,7 @@
     {
       color: #fff;
       text-align: center;
-      width: 650px;
+      width: 500px;
       display: inline-block;
       font-size: 20px;
       line-height: 1.8em;
@@ -87,10 +96,13 @@
     }
     .content
     {
+      /*background: green;*/
       position: absolute;
-      width: 100%;
+      width: 70%;
+      min-width: 1200px;
       top: 50%;
-      transform:translate(0,-50%);
+      left: 50%;
+      transform:translate(-50%,-50%);
     }
   }
   .caption-icon
@@ -138,4 +150,23 @@
   {
     border: 1px solid $yellow;
   }
+
+  .cleft
+  {
+    text-align:left;
+    h1
+    {
+      text-align: left;
+    }
+    p
+    {
+      text-align: left;
+    }
+    .btn-wrap
+    {
+      text-align: left;
+    }
+  }
+
+
 </style>

@@ -44,6 +44,13 @@
     box-shadow:  1px 1px 10px #ccc;
   }
 
+  .con-fixed
+  {
+    position: fixed;
+    top: 20px;
+    z-index: 100;
+  }
+
   .menu-item {
     position: relative;
     display: block;
