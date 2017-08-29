@@ -33,7 +33,7 @@
         </el-col>
         <el-col :span="4">
           <h2>产品与服务</h2>
-          <a href="http://www.shanmt.com">山木通系列产品</a>
+          <a href="products.html">山木通系列产品</a>
           <a href="">互联网产品研发</a>
           <a href="">金蝶系产品实施开发</a>
           <a href="">软件定制开发</a>
@@ -42,12 +42,12 @@
         </el-col>
         <el-col :span="4">
           <h2>公司</h2>
-          <a href="">公司新闻</a>
-          <a href="">行业动态</a>
-          <a href="">金蝶资讯</a>
-          <a href="">公司文化与荣誉</a>
-          <a href="">公司概况</a>
-          <a href="">联系公司</a>
+          <a href="news.html">公司新闻</a>
+          <a href="about.html">莫亚概况</a>
+          <a href="http://www.kingdee.com" target="_blank">金蝶资讯</a>
+          <a href="about.html#/glory">公司荣誉</a>
+          <a href="about.html#/culture">企业文化</a>
+          <a href="about.html#/contact">联系我们</a>
         </el-col>
       </el-row>
 

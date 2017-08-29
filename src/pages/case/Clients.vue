@@ -21,8 +21,8 @@
           return {
               clients:[
                   [{url:'zhoudf.jpg'},{url:'ytg.jpg'},{url:'wank.jpg'},{url:'boshi.jpg'}],
-                [{url:'antong.jpg'},{url:'szair.jpg'},{url:'guanz.jpg'},{url:'ruantdl.jpg'}],
-                [{url:'kingdee.jpg'},{url:'haohxh.jpg'},{url:'hongjdl.jpg'},{url:'huaw.jpg'}],
+                [{url:'antong.jpg'},{url:'szair.jpg'},{url:'guanz.jpg'},{url:'henglwl.jpg'}],
+                [{url:'kingdee.jpg'},{url:'taix.jpg'},{url:'baijc.jpg'},{url:'huaw.jpg'}],
 
 
               ]

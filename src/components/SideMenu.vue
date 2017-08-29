@@ -77,6 +77,7 @@
   .menu-item:hover
   {
     background: $yellow;
+    border-bottom:1px solid #fff;
     color: #fff;
     i
     {
@@ -85,7 +86,13 @@
   }
   .menu-item:last-child
   {
-    border: none;
+    border-bottom:1px solid #fff;
+
+  }
+
+  .menu-item:last-child:hover
+  {
+    border-bottom:1px solid #fff;
   }
 
   .no-bdr {

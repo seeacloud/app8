@@ -12,6 +12,7 @@ import Smt from './Smt.vue'
 import Chanq from './Chanq.vue'
 import SideMenu from '../../components/SideMenu.vue'
 import ControlBar from '../../components/ControlBar.vue'
+import ArticleTemplate from '../../components/ArticleTemplate.vue'
 
 
 Vue.use(ElementUI)
@@ -19,7 +20,9 @@ Vue.use(Router)
 
 const routes=[
   {path:'/',name:'Smt', component:Smt},
-  {path:'/chanq',name:'Chanq',component:Chanq}
+  {path:'/chanq',name:'Chanq',component:Chanq},
+  {path:'/kingdee',component:ArticleTemplate}
+
 ]
 
 
@@ -30,21 +33,24 @@ const router=new Router({
 new Vue({
   el:'#app',
   router,
-  components:{HeaderItem, FooterItem, Banner,SideMenu, ControlBar},
+  components:{HeaderItem, FooterItem, Banner,SideMenu, ControlBar, ArticleTemplate},
   data:{
     linkary:[
-      {title:'山木通 · 建材家具厂家版',url:'/'},
-      {title:'山木通 · 建材家具门店版',url:'/'},
-      {title:'山木通 · 云订货平台',url:'/'},
-      {title:'山木通 · 云进销存',url:'/'},
+      {title:'山木通·建材家具厂家版',url:'/'},
+      {title:'山木通·建材家具门店版',url:'/'},
+      {title:'山木通·云订货平台',url:'/'},
+      {title:'山木通·云进销存',url:'/'},
       {title:'产权管理系统',url:'/chanq'},
       {title:'人力资源管理系统',url:'/hr'},
-      {title:'物流行业管理系统',url:'/logistic'},
-      {title:'金蝶系产品实施开发',url:'/eas'},
+      {title:'物流行业管理系统',url:'/logistic'}
+
+    ],
+    linkary2:[
+      {title:'金蝶系产品实施开发',url:'/kingdee'},
       {title:'互联网产品研发',url:'/software'},
       {title:'软件定制开发',url:'/software'},
       {title:'IT人力资源服务',url:'/it'}
-    ]
+    ],
   }
 })
 let sMenu=document.querySelector('#side-menu')

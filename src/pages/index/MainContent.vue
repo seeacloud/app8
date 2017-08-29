@@ -134,7 +134,7 @@
           <el-col :span="10">
             <div class="grid-content">
               <div class="thumb-img">
-                <img src="../../../static/img/kingdee1.png" alt=""/>
+                <img src="../../../static/img/kingdee1.jpg" alt=""/>
 
               </div>
             </div>
@@ -184,7 +184,7 @@
           <el-col :span="10">
             <div class="grid-content">
               <div class="thumb-img">
-                <img src="../../../static/img/kingdee1.png" alt=""/>
+                <img src="../../../static/img/kingdee1.jpg" alt=""/>
 
               </div>
             </div>
@@ -234,7 +234,7 @@
           <el-col :span="10">
             <div class="grid-content">
               <div class="thumb-img">
-                <img src="../../../static/img/kingdee1.png" alt=""/>
+                <img src="../../../static/img/kingdee1.jpg" alt=""/>
 
               </div>
             </div>
@@ -302,8 +302,8 @@
           {title:'人力资源管理系统',name:'hr'}
         ],
         bandrows: [
-          [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'},{url: 'wank.jpg'},{url: 'baijc.png'}, {url: 'guanz.png'}, {url: 'hongjdl.png'}, ],
-          [{url: 'szair.jpg'},{url: 'antong.jpg'}, {url: 'ytg.jpg'},{url: 'boshi.jpg'}, {url: 'zhoudf.jpg'},  {url: 'ruantdl.jpg'}]
+          [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'},{url: 'wank.jpg'},{url: 'baijc.jpg'}, {url: 'guanz.jpg'}, {url: 'henglwl.jpg'}, ],
+          [{url: 'szair.jpg'},{url: 'antong.jpg'}, {url: 'ytg.jpg'},{url: 'boshi.jpg'}, {url: 'zhoudf.jpg'},  {url: 'taix.jpg'}]
 //            [{url:''},{url:''},{url:''},{url:''},{url:''},{url:''}],
 
         ]

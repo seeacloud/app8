@@ -1,9 +1,20 @@
 <template>
   <div class="container">
+
+    <div class="topband">
+      <div class="band-inner">
+        <div class="band-content">
+          <span class="band-item"><i class="iconfont">&#xe620;</i>咨询电话：0755-8657 5595</span>
+          <a href="https://exmail.qq.com/login" target="_blank" class="email-link"><i class="iconfont">&#xe73f;</i>公司邮箱</a>
+
+        </div>
+      </div>
+    </div>
+
     <div class="inner">
       <img :src="logo" alt="" class="logo-img" @click="toIndex">
-      <a href="https://exmail.qq.com/login" target="_blank" class="email-link"><i class="iconfont">&#xe73f;</i></a>
-      <a href="http://www.shanmt.com" target="_blank" class="smt-link" @mouseover="onSmt">山木通</a>
+      <!--<a href="https://exmail.qq.com/login" target="_blank" class="email-link"><i class="iconfont">&#xe73f;</i></a>-->
+      <!--<a href="http://www.shanmt.com" target="_blank" class="smt-link" @mouseover="onSmt">山木通&middot;云平台</a>-->
       <div class="nav-items">
         <ul content="nav-items">
           <li v-for="(item, index) in items" :key="index">
@@ -22,8 +33,8 @@
                 </tr>
                 <tr>
 
-                  <td class="td-bdr">产品</td>
-                  <td>服务</td>
+                  <td class="td-bdr"><span class="sub-head">产品</span></td>
+                  <td><span class="sub-head">服务</span></td>
                 </tr>
                 <tr>
                   <td class="td-bdr"><a href="products.html" target="_self">山木通·建材家具厂家版</a></td>
@@ -71,9 +82,7 @@
               </td>
               <td></td>
             </tr>
-            <tr>
-              <td>解决方案</td>
-            </tr>
+
             <tr>
               <td><a href="">EAS HR人事事务单据WEB化解决方案 </a></td>
             </tr>
@@ -107,11 +116,6 @@
               </tr>
               <tr><td></td></tr>
               <tr>
-                <td >客户案例</td>
-              </tr>
-
-
-              <tr>
                 <td ><a href="case.html#/">合作客户</a></td>
               </tr>
               <tr>
@@ -135,10 +139,6 @@
                 </td>
               </tr>
               <tr><td></td></tr>
-              <tr>
-
-                <td >关于莫亚</td>
-              </tr>
               <tr>
                 <td ><a href="about.html">莫亚概况</a></td>
               </tr>
@@ -182,7 +182,8 @@
           {title: '产品与服务', url: 'products.html', isActive: false, name: 'products', target: '_self', hasSub: true},
           {title: '解决方案', url: 'solution.html', isActive: false, name: 'solution', target: '_self', hasSub: true},
           {title: '客户案例', url: 'case.html', isActive: false, name: 'case', target: '_self', hasSub: true},
-          {title: '关于莫亚', url: 'about.html', isActive: false, name: 'about', target: '_self', hasSub: true}
+          {title: '关于莫亚', url: 'about.html', isActive: false, name: 'about', target: '_self', hasSub: true},
+          {title: '山木通·云平台', url: 'http://www.shanmt.com', isActive: false, name: '', target: '_blank', hasSub: true}
         ]
       }
     },
@@ -208,6 +209,55 @@
 <style scoped="true" lang="scss">
   $yellow: #ec6600;
 
+  .topband
+  {
+    height: 29px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .sub-head
+  {
+    line-height: 1.2em;
+    border-bottom: 2px solid $yellow;
+  }
+  .band-inner
+  {
+    width: 75%;
+    margin: 0 auto;
+    min-width: 1200px;
+    height: 100%;
+    line-height: 30px;
+  }
+  .band-content
+  {
+    width: 100%;
+    text-align: right;
+    .iconfont
+    {
+      font-size: 18px;
+      line-height: 30px;
+      vertical-align: bottom;
+    }
+  }
+  .email-link
+  {
+    font-size: 12px;
+  }
+  .email-link:hover
+  {
+    color:red;
+    .iconfont
+    {
+      color: red;
+    }
+  }
+
+
+  .band-item
+  {
+    font-size: 12px;
+    margin-right: 20px;
+  }
   .container {
     height: 120px;
     background: #ffffff;
@@ -220,7 +270,7 @@
     display: block;
     width: 75%;
     margin: 0 auto;
-    height: 100%;
+    height: 90px;
     min-width: 1200px;
   }
 
@@ -242,8 +292,8 @@
     a {
       position: relative;
       display: inline-block;
-      line-height: 120px;
-      margin: 0 20px;
+      line-height: 90px;
+      margin: 0 0 0 20px;
       font-size: 24px;
     }
     a:hover {
@@ -275,7 +325,7 @@
     height: 3px;
     background: $yellow;
     left: 0;
-    top: 80px;
+    top: 60px;
   }
 
   .logo-img {
@@ -290,14 +340,8 @@
   .smt-link {
     display: inline-block;
     float: right;
-    border: 1px solid #a9263f;
     color: #a9263f;
-    padding: 0 20px;
-    font-size: 24px;
-    height: 36px;
-    line-height: 36px;
-    border-radius: 18px;
-    margin-top: 40px;
+
   }
 
   .smt-link:after {
@@ -314,22 +358,11 @@
     border-color: red;
   }
 
-  .email-link .iconfont {
-    display: inline-block;
-    float: right;
-    font-size: 32px;
-    padding: 44px 0 0 20px;
-    vertical-align: bottom;
-  }
-
-  .email-link .iconfont:hover {
-    color: red;
-  }
 
   .sub-menu
   {
     position: absolute;
-    top: 120px;
+    top: 90px;
     z-index: 10;
     background: #fff;
     left: -20px;
@@ -397,7 +430,7 @@
   #sub-about
   {
     left: auto;
-    right: 0;
+    right: 100px;
     td.sub-menu-head
     {
       background: #4bd4e4;
