@@ -8,13 +8,13 @@
 
       <div class="icon-row">
         <div class="icon-item">
-          <a href="products.html" target="_self">
+          <a href="products.html#/api/article/8" target="_self">
           <i class="iconfont icon-earth">&#xe6d3;</i>
           <h4 class="title">互联网产品研发</h4>
           </a>
         </div>
         <div class="icon-item">
-          <a href="">
+          <a href="products.html#/api/article/7">
           <div class="img-wrap">
             <img src="../../../static/img/kingdee.png" alt=""/>
           </div>
@@ -22,13 +22,13 @@
           </a>
         </div>
         <div class="icon-item">
-          <a href="">
+          <a href="products.html#/api/article/9">
           <i class="iconfont" style="background:#f16557;">&#xe61b;</i>
           <h4 class="title">软件定制开发</h4>
           </a>
         </div>
         <div class="icon-item">
-          <a href="">
+          <a href="products.html#/api/article/10">
           <i class="iconfont" style="background:#2cca71;">&#xe614;</i>
           <h4 class="title">IT人力资源服务</h4>
           </a>

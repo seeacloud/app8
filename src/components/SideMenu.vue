@@ -42,6 +42,7 @@
     -webkit-box-shadow:  1px 1px 10px #ccc;
     -moz-box-shadow:  1px 1px 10px #ccc;
     box-shadow:  1px 1px 10px #ccc;
+    margin-bottom: 20px;
   }
 
   .con-fixed

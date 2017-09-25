@@ -31,7 +31,7 @@
                   {title:'山木通云管理平台V2.0',url:'./static/img/certification/shanmt2.0.jpg'},
                   {title:'航运订舱电商平台V2.0',url:'./static/img/certification/hangydc.jpg'},
                   {title:'山木通手机APP软件V1.0',url:'./static/img/certification/shanmtApp.jpg'},
-                  {title:'深圳市高新技术企业',url:'./static/img/certification/2013.jpg'},
+                  {title:'2013金蝶优秀服务伙伴',url:'./static/img/certification/2013.jpg'},
                   {title:'2014金蝶优秀服务伙伴',url:'./static/img/certification/2014.jpg'},
                   {title:'2015金蝶优秀服务伙伴',url:'./static/img/certification/2015.jpg'},
                   {title:'2016金蝶优秀服务伙伴',url:'./static/img/certification/2016.jpg'},

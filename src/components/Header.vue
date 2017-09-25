@@ -21,7 +21,7 @@
             <a v-bind:href="item.url" v-bind:class="{active: activeitem==item.name}"
                v-bind:target="item.target" @mouseover="showSubMenu(item.name)" :id="item.name">{{item.title}}</a>
           </li>
-          <div class="sub-menu" id="sub-products" v-show="activeSubID=='products'" @mouseleave="mouseleaveSub">
+          <div class="sub-menu" id="sub-products" v-show="activeSubID=='products'" @mouseleave="mouseleaveSub" @click="clickSub">
               <table cellspacing="0" >
                 <tr>
                   <td rowspan="17" class="sub-menu-head">
@@ -37,31 +37,31 @@
                   <td><span class="sub-head">服务</span></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="products.html" target="_self">山木通·建材家具厂家版</a></td>
-                  <td><a href="">金蝶系产品实施开发</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/0" target="_self">山木通·建材家具厂家版</a></td>
+                  <td><a href="products.html#/api/article/7">金蝶系产品实施开发</a></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="products.html#/chanq" target="_self">山木通·建材家具门店版</a></td>
-                  <td><a href="">软件定制开发</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/1" target="_self">山木通·建材家具门店版</a></td>
+                  <td><a href="products.html#/api/article/8">互联网产品研发</a></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="">山木通·云订货平台</a></td>
-                  <td><a href="">IT人力资源服务</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/2" target="_self">山木通·云订货平台</a></td>
+                  <td><a href="products.html#/api/article/9">软件定制开发</a></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="">山木通·云进销存</a></td>
-                  <td><a href="">互联网产品研发</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/3" target="_self">山木通·云进销存</a></td>
+                  <td><a href="products.html#/api/article/10">IT人力资源服务</a></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="">产权管理平台</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/4">产权管理平台</a></td>
                   <td><a href="price.html" target="_self">服务价格</a></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="">人力资源管理平台</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/5">人力资源管理平台</a></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td class="td-bdr"><a href="">物流行业管理平台</a></td>
+                  <td class="td-bdr"><a href="products.html#/api/article/6">物流行业管理平台</a></td>
                   <td></td>
                 </tr>
                 <tr>
@@ -84,19 +84,19 @@
             </tr>
 
             <tr>
-              <td><a href="">EAS HR人事事务单据WEB化解决方案 </a></td>
+              <td><a href="solution.html">EAS HR人事事务单据WEB化解决方案 </a></td>
             </tr>
             <tr>
-              <td><a href="">第三方OA系统与EAS系统集成解决方案</a></td>
+              <td><a href="solution.html">第三方OA系统与EAS系统集成解决方案</a></td>
             </tr>
             <tr>
-              <td><a href="">物流在线订舱解决方案</a></td>
+              <td><a href="solution.html">物流在线订舱解决方案</a></td>
             </tr>
             <tr>
-              <td><a href="">产权管理系统解决方案</a></td>
+              <td><a href="solution.html">产权管理系统解决方案</a></td>
             </tr>
             <tr>
-              <td class="td-bdr"><a href="">人力资源管理系统解决方案</a></td>
+              <td class="td-bdr"><a href="solution.html">人力资源管理系统解决方案</a></td>
             </tr>
             <tr>
               <td></td>
@@ -194,6 +194,9 @@
       mouseleaveSub: function () {
         this.activeSubID=''
       },
+      clickSub:function () {
+          this.activeSubID=''
+      },
       onSmt:function () {
         this.activeSubID=''
       },
@@ -214,6 +217,7 @@
     height: 29px;
     font-size: 12px;
     border-bottom: 1px solid #eee;
+    color:#999;
   }
   .sub-head
   {
@@ -242,6 +246,8 @@
   .email-link
   {
     font-size: 12px;
+    color:inherit;
+
   }
   .email-link:hover
   {

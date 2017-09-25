@@ -33,12 +33,12 @@
         </el-col>
         <el-col :span="4">
           <h2>产品与服务</h2>
-          <a href="products.html">山木通系列产品</a>
-          <a href="">互联网产品研发</a>
-          <a href="">金蝶系产品实施开发</a>
-          <a href="">软件定制开发</a>
-          <a href="">物流行业产品</a>
-          <a href="">IT人力资源服务</a>
+          <a href="products.html#/api/article/0">山木通系列产品</a>
+          <a href="products.html#/api/article/6">物流行业产品</a>
+          <a href="products.html#/api/article/7">金蝶系产品实施开发</a>
+          <a href="products.html#/api/article/8">互联网产品研发</a>
+          <a href="products.html#/api/article/9">软件定制开发</a>
+          <a href="products.html#/api/article/10">IT人力资源服务</a>
         </el-col>
         <el-col :span="4">
           <h2>公司</h2>
@@ -86,6 +86,7 @@
     color: #ffffff;
     margin: 0 auto;
     margin-top: 80px;
+    min-width: 1200px;
   }
 
   .inner {

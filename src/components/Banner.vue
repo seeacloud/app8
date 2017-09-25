@@ -24,6 +24,7 @@
     position: relative;
     height: 260px;
     overflow: hidden;
+  min-width:1200px;
     img
     {
       width: 100%;

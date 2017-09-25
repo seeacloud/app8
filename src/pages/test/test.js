@@ -25,7 +25,9 @@ created: function () {
   methods:{
     getData:function () {
       console.log('getting data...')
-      this.$http.get("http://localhost:8080/api/newslist")
+      this.$http.get("http://moyasz.com/mysite/ots/getNews?limit=5")
+        // this.$http.jsonp('http://112.124.2.247:88/mysite/news/publish/getNews?limit=5',{credentials:true})
+      // this.$http.get("http://localhost:8080/api/newslist")
         .then((res)=>{
         console.log(res.body)
           this.newsList=res.body.data
@@ -36,3 +38,5 @@ created: function () {
     }
   }
 })
+
+

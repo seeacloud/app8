@@ -10,16 +10,16 @@
       </div>
       <div class="m-sec">
 
-        <a href="">全部动态</a>
-        <a href="">公司新闻</a>
+        <a href="about.html#/culture" target="_self">公司文化活动</a>
         <a href="">行业新闻</a>
-        <a href="">金蝶资讯</a>
-        <a href="">公司文化与荣誉</a>
+        <a href="http://www.kingdee.com" target="_blank">金蝶资讯</a>
+        <a href="about.html#/glory" target="_self">公司荣誉</a>
       </div>
       <div class="m-sec">
         <h3>友情链接</h3>
-        <a href="">山木通云管理平台</a>
-        <a href="">金蝶集团</a>
+        <a href="http://www.shanmt.com" target="_blank">山木通云管理平台</a>
+        <a href="http://www.kingdee.com" target="_blank">金蝶集团</a>
+        <a href="http://www.sinqx.com" target="_blank">新企学IT培训</a>
       </div>
     </div>
 </template>

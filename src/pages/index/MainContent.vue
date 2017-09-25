@@ -9,7 +9,9 @@
       <div class="tab-wrap">
         <div class="tab-group">
 
-          <div v-for="(item,index) in tabItems" :key="index" class="tab-item" @click="showProduct(item.name)" :class="{tabactive:activeItem===item.name}">{{item.title}}</div>
+          <div v-for="(item,index) in tabItems" :key="index" class="tab-item" @click="showProduct(item.name)"
+               :class="{tabactive:activeItem===item.name}">{{item.title}}
+          </div>
           <!--<div class="tab-item" @click="showItem('smt-m')" v-bind:class="{tabactive:activeItem=='p-smt'}">山木通·建材家具厂家版</div>-->
           <!--<div class="tab-item" @click="showItem('smt-agent')" v-bind:class="{tabactive:activeItem=='p-smt'}">山木通·建材家具门店版</div>-->
           <!--<div class="tab-item" @click="showItem('smt-order')" v-bind:class="{tabactive:activeItem=='p-smt'}">山木通·云订货平台</div>-->
@@ -140,142 +142,81 @@
             </div>
           </el-col>
           <el-col :span="14">
-            <div class="news-item">
+            <div class="news-item" v-for="(moyanews, index) in moyalist" :key="index">
               <a href="news.html" class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
+                <h3 class="news-title">{{moyanews.title}}</h3>
+                <h6 class="author"><span>作者： {{moyanews.author}}</span> <span>发布日期：{{moyanews.pdate}}</span></h6>
                 <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
+                  {{moyanews.description}}
                 </p>
                 <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
+                  <!--<img src="../../../static/img/t-1.jpg" alt="">-->
+                  <img :src="'http://www.shanmt.com/muye/images_test'+moyanews.picurl" alt=""/>
+
                 </div>
               </a>
             </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
+
           </el-col>
         </el-row>
       </div>
+
       <div class="news-smt" v-show="activeNews=='news-field'">
         <el-row :gutter="20" style="margin-bottom:60px;">
           <el-col :span="10">
             <div class="grid-content">
               <div class="thumb-img">
-                <img src="../../../static/img/kingdee1.jpg" alt=""/>
+                <img src="../../../static/img/mac-charts.jpg" alt=""/>
 
               </div>
             </div>
           </el-col>
           <el-col :span="14">
-            <div class="news-item">
-              <a href="" class="news">
-                <h3 class="news-title">field莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
+            <div class="news-item" v-for="(moyanews, index) in fieldlist" :key="index">
+              <a href="news.html" class="news">
+                <h3 class="news-title">{{moyanews.title}}</h3>
+                <h6 class="author"><span>作者： {{moyanews.author}}</span> <span>发布日期：{{moyanews.pdate}}</span></h6>
                 <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
+                  {{moyanews.description}}
                 </p>
                 <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
+                  <!--<img src="../../../static/img/t-1.jpg" alt="">-->
+                  <img :src="'http://www.shanmt.com/muye/images_test'+moyanews.picurl" alt=""/>
+
                 </div>
               </a>
             </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
+
           </el-col>
         </el-row>
       </div>
+
       <div class="news-smt" v-show="activeNews=='news-tech'">
         <el-row :gutter="20" style="margin-bottom:60px;">
           <el-col :span="10">
             <div class="grid-content">
               <div class="thumb-img">
-                <img src="../../../static/img/kingdee1.jpg" alt=""/>
+                <img src="../../../static/img/mac.jpg" alt=""/>
 
               </div>
             </div>
           </el-col>
           <el-col :span="14">
-            <div class="news-item">
-              <a href="" class="news">
-                <h3 class="news-title">tech莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
+            <div class="news-item" v-for="(moyanews, index) in technologylist" :key="index">
+              <a href="news.html" class="news">
+                <h3 class="news-title">{{moyanews.title}}</h3>
+                <h6 class="author"><span>作者： {{moyanews.author}}</span> <span>发布日期：{{moyanews.pdate}}</span></h6>
                 <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
+                  {{moyanews.description}}
                 </p>
                 <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
+                  <!--<img src="../../../static/img/t-1.jpg" alt="">-->
+                  <img :src="'http://www.shanmt.com/muye/images_test'+moyanews.picurl" alt=""/>
+
                 </div>
               </a>
             </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="news-item">
-              <a class="news">
-                <h3 class="news-title">莫亚科技拓展新版图（长沙办事处成立）</h3>
-                <h6 class="author">莫亚科技 2016-03-07</h6>
-                <p class="news-content">
-                  深圳市莫亚科技有限公司长沙办事处的成立，是为适应公司发展需要，旨在湖南长沙地区市场业务拓展和为客户提供更加优质的服务
-                </p>
-                <div class="news-img">
-                  <img src="../../../static/img/t-1.jpg" alt="">
-                </div>
-              </a>
-            </div>
+
           </el-col>
         </el-row>
       </div>
@@ -286,6 +227,10 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+
+  Vue.use(VueResource)
 
   export default {
     data() {
@@ -293,59 +238,99 @@
         activeName: 'first',
         activeItem: 'smt-m',
         activeNews: 'news-moya',
-        tabItems:[
-          {title:'山木通·建材家具厂家版',name:'smt-m'},
-          {title:'山木通·建材家具门店版',name:'smt-agent'},
-          {title:'山木通·云订货平台',name:'smt-order'},
-          {title:'山木通·云进销存',name:'smt-jxc'},
-          {title:'产权管理系统',name:'chanq'},
-          {title:'人力资源管理系统',name:'hr'}
+        moyalist: '',
+        fieldlist: '',
+        technologylist: '',
+        tabItems: [
+          {title: '山木通·建材家具厂家版', name: 'smt-m'},
+          {title: '山木通·建材家具门店版', name: 'smt-agent'},
+          {title: '山木通·云订货平台', name: 'smt-order'},
+          {title: '山木通·云进销存', name: 'smt-jxc'},
+          {title: '产权管理系统', name: 'chanq'},
+          {title: '人力资源管理系统', name: 'hr'}
         ],
         bandrows: [
-          [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'},{url: 'wank.jpg'},{url: 'baijc.jpg'}, {url: 'guanz.jpg'}, {url: 'henglwl.jpg'}, ],
-          [{url: 'szair.jpg'},{url: 'antong.jpg'}, {url: 'ytg.jpg'},{url: 'boshi.jpg'}, {url: 'zhoudf.jpg'},  {url: 'taix.jpg'}]
+          [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'}, {url: 'wank.jpg'}, {url: 'baijc.jpg'}, {url: 'guanz.jpg'}, {url: 'henglwl.jpg'},],
+          [{url: 'szair.jpg'}, {url: 'antong.jpg'}, {url: 'ytg.jpg'}, {url: 'boshi.jpg'}, {url: 'zhoudf.jpg'}, {url: 'taix.jpg'}]
 //            [{url:''},{url:''},{url:''},{url:''},{url:''},{url:''}],
 
         ]
       }
     },
+    created: function () {
+      this.getmoyalist()
+      this.getfieldlist()
+      this.gettechnologylist()
+    },
     methods: {
-      handleClick:function(tab, event) {
+      getmoyalist: function () {
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+          .then((res) => {
+            this.moyalist = res.body.data
+          })
+          .catch(function (res) {
+            console.log(res)
+          })
+      },
+      getfieldlist: function () {
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+          .then((res) => {
+            this.fieldlist = res.body.data
+          })
+          .catch(function (res) {
+            console.log(res)
+          })
+      },
+      gettechnologylist: function () {
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+          .then((res) => {
+            this.technologylist = res.body.data
+          })
+          .catch(function (res) {
+            console.log(res)
+          })
+      },
+      handleClick: function (tab, event) {
         console.log(tab, event);
       },
-      showProduct:function(name) {
-        this.activeItem=name
+      showProduct: function (name) {
+        this.activeItem = name
       },
-      showNews1:function () {
-        this.activeNews='news-moya'
+      showNews1: function () {
+        this.activeNews = 'news-moya'
       },
-      showNews2:function () {
-        this.activeNews='news-field'
+      showNews2: function () {
+        this.activeNews = 'news-field'
       },
-      showNews3:function () {
-        this.activeNews='news-tech'
+      showNews3: function () {
+        this.activeNews = 'news-tech'
       },
     }
   }
 
 </script>
 
-<style lang="scss" scoped="true" type="text/css">
+<!--<style lang="scss" scoped="true" type="text/css">-->
+<style lang='scss' scoped>
 
-  @import "../../../static/base.scss";
+
+  @import "../../../static/base";
+
   .con {
-  .inner {
-    width: 75%;
-    min-width: 1200px;
-    margin: 0 auto;
-  }
 
-  .sec-title {
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 40px;
-    margin-top: 60px;
-  }
+    .inner {
+      width: 75%;
+      min-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sec-title {
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 40px;
+      margin-top: 60px;
+    }
+
   }
 
   .round-btn {
@@ -371,22 +356,22 @@
   .tab-group {
     display: inline-block;
 
-  .tab-item {
-    display: inline-block;
-    background: #dddddd;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    float: left;
-    margin: 0 1px;
-    cursor: pointer;
-  }
+    .tab-item {
+      display: inline-block;
+      background: #dddddd;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      float: left;
+      margin: 0 1px;
+      cursor: pointer;
+    }
 
-  .tabactive {
-    background: deepskyblue;
-    color: #ffffff;
-  }
+    .tabactive {
+      background: deepskyblue;
+      color: #ffffff;
+    }
 
   }
 
@@ -402,26 +387,26 @@
     position: relative;
     height: 100%;
 
-  h1 {
-    text-align: left;
-  }
+    h1 {
+      text-align: left;
+    }
 
-  p {
-    text-align: left;
-    font-size: 20px;
-    line-height: 1.8em;
-  }
+    p {
+      text-align: left;
+      font-size: 20px;
+      line-height: 1.8em;
+    }
 
-  .des-wrap {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-  }
+    .des-wrap {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
 
   }
 
@@ -432,20 +417,20 @@
     float: left;
     text-align: center;
     overflow: hidden;
-  height:100%;
+    height: 100%;
 
-  img {
-    position: absolute;
-    width: 70%;
-    top: 50%;
-    left: 50%;
-    display: inline-block;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-  }
+    img {
+      position: absolute;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
 
   }
 
@@ -453,26 +438,26 @@
     overflow: hidden;
     padding: 0 10px;
 
-  .band-wrap {
-    border: 1px solid #dddddd;
-    position: relative;
-    height: 100px;
-    display: block;
+    .band-wrap {
+      border: 1px solid #dddddd;
+      position: relative;
+      height: 100px;
+      display: block;
 
-  img {
-    width: 90%;
-    position: absolute;
-    display: block;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+      img {
+        width: 90%;
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
 
-  }
+    }
 
   }
 
@@ -482,61 +467,61 @@
 
   .news-item {
     position: relative;
-    height: 150px;
-    padding-left: 160px;
+    height: 100px;
+    padding-left: 110px;
 
-  .news-img {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    .news-img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      overflow: hidden;
 
-  img {
-    width: 100%;
-  }
+      img {
+        width: 100%;
+      }
 
-  }
+    }
   }
 
   .news-item {
     margin: 20px 0;
 
-  .news-title {
-    margin: 0;
-  }
+    .news-title {
+      margin: 0;
+    }
 
-  .author {
-    margin: 0;
-    font-weight: normal;
-    color: #999999;
-    margin-top: 5px;
-  }
+    .author {
+      margin: 0;
+      font-weight: normal;
+      color: #999999;
+      margin-top: 5px;
+    }
 
-  p {
-    line-height: 1.8em;
-  }
+    p {
+      line-height: 1.8em;
+    }
 
   }
 
   a.news:hover {
     color: $yellow;
 
-  .author {
-    color: $yellow;
-  }
+    .author {
+      color: $yellow;
+    }
 
   }
 
   .thumb-img {
-    height: 490px;
+    height: 460px;
     overflow: hidden;
     margin-top: 20px;
 
-  img {
-    width: 100%;
-  }
+    img {
+      width: 100%;
+    }
 
   }
 

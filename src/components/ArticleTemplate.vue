@@ -1,17 +1,45 @@
 <template>
     <div class="article-con">
 
-      <h1>文章标题文章标题</h1>
-      <div class="author"><span>作者：莫亚科技</span> <span>日期：2017-01-22</span></div>
-      <p>正文内容正文内容正文内容正文内容正文内容正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文内容正文内容正文内容 ；正文内容正文内容正文内容，正文内容正文内容正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文正文内容。正文内容正文，内容正文内容正文内容正文内容正文内容，正文内容正文内容正文内容 ；正文内容</p>
+
+      <h1>{{article.title}}</h1>
+      <div class="author">作者： <span>{{article.author}}</span> 日期： <span>{{article.date}}</span></div>
+
+      <div v-for="(item, index) in article.content" :key="index">
+        <img :src="item" alt="" v-if="item.indexOf('.jpg')>=0">
+        <p v-if="item.indexOf('.jpg')<0">{{item}}</p>
+      </div>
     </div>
 </template>
 
 <script>
     export default {
         data () {
-            return {}
+            return {
+                articleId:'xxx',
+              article:''
+            }
+        },
+      mounted:function () {
+        console.log('route is:',this.$route.params.id)
+        this.articleId=this.$route.params.id
+        this.$http.get('/api/article/'+this.articleId)
+          .then((res)=>{
+            this.article=res.body
+          })
+        window.scrollTo(0,0)
+      },
+      watch:{
+        '$route' (to, from)
+        {
+          this.articleId=this.$route.params.id
+          this.$http.get('/api/article/'+this.articleId)
+            .then((res)=>{
+              this.article=res.body
+            })
+          window.scrollTo(0,0)
         }
+      }
     }
 </script>
 
@@ -23,7 +51,7 @@
   img
   {
     width: 70%;
-    margin: 0 15%;
+    margin: 20px 15% 5px 15%;
   }
 
   h1
@@ -52,6 +80,12 @@ p
   font-weight: normal;
 }
 
+  .img-title
+  {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 
 
 
