@@ -2,7 +2,7 @@
   <div class="container">
     <div class="menu-head">产品与服务 </div>
 
-    <router-link class="menu-item" to="/">
+    <router-link class="menu-item" to="/product/1">
       <div>
         山木通 <i class="el-icon-arrow-right"></i>
       </div>

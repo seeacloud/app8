@@ -11,7 +11,7 @@
 
           <h2 class="news-title">{{item.title}}</h2>
           <div class="author"><span>作者：{{item.author}}</span><span>发布日期：{{item.pdate}}</span></div>
-          <p> {{item.description}}</p>
+          <p class="des"> {{item.description}}</p>
           <router-link :to="'/archives/'+item.id" class="a-btn">了解详情</router-link>
 
         </div>
@@ -57,7 +57,7 @@
     },
     methods: {
       getdata: function () {
-        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=5")
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=1")
           .then((res) => {
             this.newslist = res.body.data
           })
@@ -81,9 +81,8 @@
   .content-wrap {
     position: relative;
     padding-left: 220px;
-    height: 120px;
+    height: 140px;
   }
-
   .title-img-wrap {
     position: absolute;
     left: 0;
@@ -147,6 +146,14 @@
     line-height: 20px;
     color: #666666;
     text-align: justify;
+    .des{
+      margin: 5px 0 5px 0;
+      padding: 0;
+      line-height: 1.3em;
+      height: 3.9em;
+      overflow: hidden;
+      color: #777;
+    }
   }
 
   .a-more {

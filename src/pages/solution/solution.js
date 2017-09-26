@@ -1,36 +1,37 @@
-import Vue from 'vue'
-import HeaderItem from '../../components/Header.vue'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-import FooterItem from '../../components/Footer.vue'
-import '../../../static/normalize.css'
-import '../../../static/common.css'
-import '../../assets/iconfont.css'
-import Router from 'vue-router'
-import Banner from '../../components/Banner.vue'
+import Vue from "vue";
+import HeaderItem from "../../components/Header.vue";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-default/index.css";
+import FooterItem from "../../components/Footer.vue";
+import "../../../static/normalize.css";
+import "../../../static/common.css";
+import "../../assets/iconfont.css";
+import Router from "vue-router";
+import Banner from "../../components/Banner.vue";
 // import SideMenu from '../../components/SideMenu.vue'
-import ControlBar from '../../components/ControlBar.vue'
-import SoluAry from './SoluAry.vue'
-import SolutionDetail from './SolutionDetail.vue'
-
+import ControlBar from "../../components/ControlBar.vue";
+import SoluAry from "./SoluAry.vue";
+import SolutionDetail from "./SolutionDetail.vue";
+import VueResource from "vue-resource";
 
 Vue.use(ElementUI)
 Vue.use(Router)
+Vue.use(VueResource)
 
-const routes=[
-  {path:'/',component:SoluAry},
-  {path:'/solutionDetail',name:'solutionDetail',component:SolutionDetail}
+const routes = [
+  {path: '/', component: SoluAry},
+  {path: '/solutions/:id', name: 'solutionDetail', component: SolutionDetail}
 ]
-const router=new Router({
+const router = new Router({
   routes
 })
 
 new Vue({
-  el:'#app',
+  el: '#app',
   router,
-  components:{HeaderItem, FooterItem, Banner, ControlBar, SoluAry,SolutionDetail},
-  data:{
-    linkary:[
+  components: {HeaderItem, FooterItem, Banner, ControlBar, SoluAry, SolutionDetail},
+  data: {
+    linkary: [
       // {title:'山木通 · 云管理平台',url:'/'},
       // {title:'产权管理系统',url:'/chanq'},
       // {title:'人力资源管理系统',url:'/hr'},

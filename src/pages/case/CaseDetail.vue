@@ -1,82 +1,103 @@
 <template>
-    <div class="article-con">
-      <h1 class="article-title">招商局产权管理系统</h1>
-      <div class="author">作者：莫亚科技  发布日期： 2017-08-25</div>
+  <div class="article-con">
+    <h1 class="article-title">{{casecontent.title}}</h1>
+    <div class="author"><span>作者： {{casecontent.author}}</span><span>发布日期： {{casecontent.pdate}}</span></div>
+    <div v-html="casecontent.htmlcontent"></div>
 
-      <p>招商局集团(简称招商局)是国家驻港大型企业集团，经营总部设于香港，业务主要分布于香港、内地、东南亚等极具活力和潜力的新兴市场。截至2012年底，招商局集团拥有总资产3920.83亿元(以下单位，未经注明均为人民币)，管理总资产3.59万亿元。2012年，招商局集团保持平稳增长，盈利水平创历史新高，利润总额263.15 亿元，母公司净利润146.22亿元，集团利润总额在各央企中排名列第10位。招商局是中央直接管理的国有重要骨干企业，亦被列为香港四大中资企业之一。2004-2011年招商局连续八年获国务院国资委评为A级中央企业。在2004-2006年和2007-2009年任期考核中，招商局连续两次获国务院国资委授予“业绩优秀企业”称号。</p>
-      <img src="../../../static/img/cmg.jpeg" alt=""/>
-      <div class="img-title">招商局大厦</div>
 
-      <p>招商局集团(简称招商局)是国家驻港大型企业集团，经营总部设于香港，业务主要分布于香港、内地、东南亚等极具活力和潜力的新兴市场。截至2012年底，招商局集团拥有总资产3920.83亿元(以下单位，未经注明均为人民币)，管理总资产3.59万亿元。2012年，招商局集团保持平稳增长，盈利水平创历史新高，利润总额263.15 亿元，母公司净利润146.22亿元，集团利润总额在各央企中排名列第10位。招商局是中央直接管理的国有重要骨干企业，亦被列为香港四大中资企业之一。2004-2011年招商局连续八年获国务院国资委评为A级中央企业。在2004-2006年和2007-2009年任期考核中，招商局连续两次获国务院国资委授予“业绩优秀企业”称号。</p>
-      <p>招商局集团(简称招商局)是国家驻港大型企业集团，经营总部设于香港，业务主要分布于香港、内地、东南亚等极具活力和潜力的新兴市场。截至2012年底，招商局集团拥有总资产3920.83亿元(以下单位，未经注明均为人民币)，管理总资产3.59万亿元。2012年，招商局集团保持平稳增长，盈利水平创历史新高，利润总额263.15 亿元，母公司净利润146.22亿元，集团利润总额在各央企中排名列第10位。招商局是中央直接管理的国有重要骨干企业，亦被列为香港四大中资企业之一。2004-2011年招商局连续八年获国务院国资委评为A级中央企业。在2004-2006年和2007-2009年任期考核中，招商局连续两次获国务院国资委授予“业绩优秀企业”称号。</p>
-      <img src="../../../static/img/cmg.jpeg" alt=""/>
-      <div class="img-title">招商局大厦</div>
+    <router-link to="/case" class="link-back">返回</router-link>
 
-      <p>招商局集团(简称招商局)是国家驻港大型企业集团，经营总部设于香港，业务主要分布于香港、内地、东南亚等极具活力和潜力的新兴市场。截至2012年底，招商局集团拥有总资产3920.83亿元(以下单位，未经注明均为人民币)，管理总资产3.59万亿元。2012年，招商局集团保持平稳增长，盈利水平创历史新高，利润总额263.15 亿元，母公司净利润146.22亿元，集团利润总额在各央企中排名列第10位。招商局是中央直接管理的国有重要骨干企业，亦被列为香港四大中资企业之一。2004-2011年招商局连续八年获国务院国资委评为A级中央企业。在2004-2006年和2007-2009年任期考核中，招商局连续两次获国务院国资委授予“业绩优秀企业”称号。</p>
-
-      <router-link to="/case" class="link-back">返回</router-link>
-
-    </div>
+  </div>
 </template>
 
+<!--getCase: function () {-->
+<!--this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=5&type=5")-->
+<!--.then((res) => {-->
+<!--this.caselist = res.body.data-->
+<!--console.log('caselist:',this.caselist)-->
+<!--})-->
+<!--.catch(function (res) {-->
+
+<!--})-->
+<!--}-->
 <script>
-    export default {
-        data () {
-            return {}
-        }
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+  Vue.use(VueResource)
+
+  export default {
+    data () {
+      return {
+        casecontent: '',
+        caseId: ''
+      }
+    },
+    mounted: function () {
+      this.caseId = this.$route.params.id
+      this.getCaseContent(this.caseId)
+    },
+    methods: {
+      getCaseContent: function (caseId) {
+        this.$http.get('http://112.124.2.247:88/mysite/ots/getNewById?id=' + caseId)
+          .then((res) => {
+            this.casecontent = res.body.data
+          })
+          .catch(function (res) {
+
+          })
+      }
     }
+  }
 </script>
 
 <style lang='scss' scoped>
   @import "../../../static/article.css";
   @import "../../../static/base.scss";
 
+  .article-title {
+    margin-bottom: 5px;
+  }
 
-.article-title
-{
-  margin-bottom: 5px;
-}
-.author
-{
-  font-size: 12px;
-  color: #999;
-  text-align: center;
-}
-  p
-  {
+  .author {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    span {
+      margin-right: 20px;
+    }
+  }
+
+  p {
     font-size: 14px;
-    color: #666;
+    color: #666666;
     text-align: justify;
     line-height: 1.8em;
     text-indent: 24px;
     margin: 30px 0;
   }
-  img
-  {
+
+  img {
     display: block;
     width: 70%;
     margin-left: 15%;
     margin-bottom: 5px;
   }
-  .img-title
-  {
+
+  .img-title {
     display: block;
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: #666666;
   }
 
-  .link-back
-  {
+  .link-back {
     color: $yellow;
     padding: 2px;
     font-size: 14px;
-
   }
 
-  .link-back:hover
-  {
+  .link-back:hover {
     background: $yellow;
-    color: #fff;
+    color: #ffffff;
   }
 </style>

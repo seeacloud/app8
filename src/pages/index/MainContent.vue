@@ -26,7 +26,7 @@
         <div class="con-left">
           <div class="des-wrap">
             <h1>山木通·建材家具厂家版</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <p>山木通团队结合多年丰富的行业管理经验，充分考虑企业的特点，为家具、家居、建材、木业加工生产企业量身定制，解决企业核心管理问题，提供最符合家具、家居、建材、木业加工生产企业的全流程解决方案。</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
@@ -39,39 +39,39 @@
         <div class="con-left">
           <div class="des-wrap">
             <h1>山木通·建材家具门店版</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <p>通过山木通门店版一键即可完成销售开单,厂家订货,即时生成应收款、应付款、毛利润等经营报表,库存智能管理,云端存储数据;电脑手机全支持，指尖上办公，让各环节工作从此化繁为简是店铺可靠的智能伙伴。</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
         </div>
         <div class="con-right">
-          <img src="../../../static/img/iphonemac.jpg" alt=""/>
+          <img src="../../../static/img/maciphonefront.png" alt=""/>
         </div>
       </div>
       <div v-show="activeItem=='smt-order'" class="p-item" id="smt-order">
         <div class="con-left">
           <div class="des-wrap">
             <h1>山木通·云订货平台</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <p>智能、高效的订货管理系统，全面提升订货效率，可一键完成销售开单,厂家订货,即时生成应收款、应付款、毛利润等经营报表,库存智能管理,云端存储数据，十八般武艺，样样精通</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
         </div>
         <div class="con-right">
-          <img src="../../../static/img/iphonemac.jpg" alt=""/>
+          <img src="../../../static/img/macair-o.jpg" alt=""/>
         </div>
       </div>
       <div v-show="activeItem=='smt-jxc'" class="p-item" id="smt-jxc">
         <div class="con-left">
           <div class="des-wrap">
             <h1>山木通·云进销存</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <p>支持多种行业，满足各行各业的需求，服装鞋帽，建材家具多属性支持，全面提升管理水平；智能补货，自动报表生成，生意轻松搞定</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
         </div>
         <div class="con-right">
-          <img src="../../../static/img/iphonemac.jpg" alt=""/>
+          <img src="../../../static/img/smt-all.jpg" alt=""/>
         </div>
       </div>
 
@@ -190,7 +190,6 @@
           </el-col>
         </el-row>
       </div>
-
       <div class="news-smt" v-show="activeNews=='news-tech'">
         <el-row :gutter="20" style="margin-bottom:60px;">
           <el-col :span="10">
@@ -264,7 +263,7 @@
     },
     methods: {
       getmoyalist: function () {
-        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4&type=1")
           .then((res) => {
             this.moyalist = res.body.data
           })
@@ -273,7 +272,7 @@
           })
       },
       getfieldlist: function () {
-        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4&type=2")
           .then((res) => {
             this.fieldlist = res.body.data
           })
@@ -282,7 +281,7 @@
           })
       },
       gettechnologylist: function () {
-        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4")
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=4&type=3")
           .then((res) => {
             this.technologylist = res.body.data
           })
@@ -497,10 +496,19 @@
       font-weight: normal;
       color: #999999;
       margin-top: 5px;
+      margin-bottom: 10px;
+      span{
+        margin-right: 20px;
+      }
     }
 
     p {
-      line-height: 1.8em;
+      line-height: 1.3em;
+      margin:0;
+      height: 3.9em;
+      overflow: hidden;
+      color: #666;
+      font-size: 14px;
     }
 
   }

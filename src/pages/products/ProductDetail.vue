@@ -1,9 +1,9 @@
 <template>
-  <div class="con">
+  <div class="article-con">
     <h2 class="news-title">{{news.title}}</h2>
     <div class="author">发布时间： <span>{{news.pdate}}</span> 发布者： <span>{{news.author}}</span></div>
     <div v-html="news.htmlcontent"></div>
-    <router-link to="/" class="back-btn">返回</router-link>
+    <!--<router-link to="/" class="back-btn">返回</router-link>-->
   </div>
 </template>
 
@@ -20,7 +20,7 @@
         news: ''
       }
     },
-    created: function () {
+    mounted: function () {
       this.articleid = this.$route.params.id
       console.log('articleid is:', this.articleid)
       this.getnews(this.$route.params.id)
@@ -46,11 +46,13 @@
 
   .news-title {
     color: #333333;
+    text-align: center;
   }
 
   .author {
     font-size: 12px;
     color: #aaaaaa;
+    text-align: center;
   }
 
   p {

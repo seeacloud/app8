@@ -3,7 +3,7 @@
     <div class="menu-head">
       {{headtitle}}
     </div>
-    <router-link v-for="(item, index) in links" :to="item.url" class="menu-item" :key="index">
+    <router-link v-for="(item, index) in links" :to="'/product/'+item.id" class="menu-item" :key="index">
       <div>
         {{item.title}}<i class="el-icon-arrow-right"></i>
       </div>
@@ -13,12 +13,10 @@
 
 <script>
   export default{
-      name:'SideMenu',
-    props:['headtitle','links'],
+    name: 'SideMenu',
+    props: ['headtitle', 'links'],
     data (){
-          return {
-
-          }
+      return {}
     }
   }
 </script>
@@ -26,27 +24,26 @@
 
 <style lang="scss" scoped="true">
   @import "../../static/base.scss";
+
   $yellow: #ec6600;
 
-  .menu-head
-  {
+  .menu-head {
     background: $yellow;
-    color: #fff;
+    color: #ffffff;
     padding: 20px 15px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
     font-size: 18px;
-
   }
+
   .container {
-    background: #fff;
-    -webkit-box-shadow:  1px 1px 10px #ccc;
-    -moz-box-shadow:  1px 1px 10px #ccc;
-    box-shadow:  1px 1px 10px #ccc;
+    background: #ffffff;
+    -webkit-box-shadow: 1px 1px 10px #cccccc;
+    -moz-box-shadow: 1px 1px 10px #cccccc;
+    box-shadow: 1px 1px 10px #cccccc;
     margin-bottom: 20px;
   }
 
-  .con-fixed
-  {
+  .con-fixed {
     position: fixed;
     top: 20px;
     z-index: 100;
@@ -55,45 +52,41 @@
   .menu-item {
     position: relative;
     display: block;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
     padding: 12px 15px;
-    font-size:14px;
-  color:#666;
+    font-size: 14px;
+    color: #666666;
 
-    i
-    {
+    i {
       position: absolute;
       right: 10px;
       display: inline-block;
       top: 50%;
-      -webkit-transform: translate(0 ,-50%);
-      -moz-transform: translate(0 ,-50%);
-      -ms-transform: translate(0 ,-50%);
-      -o-transform: translate(0 ,-50%);
-      transform: translate(0 ,-50%);
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
       font-size: 12px;
-      color: #999;
+      color: #999999;
     }
   }
-  .menu-item:hover
-  {
+
+  .menu-item:hover {
     background: $yellow;
-    border-bottom:1px solid #fff;
-    color: #fff;
-    i
-    {
-      color: #fff;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    i {
+      color: #ffffff;
     }
   }
-  .menu-item:last-child
-  {
-    border-bottom:1px solid #fff;
 
+  .menu-item:last-child {
+    border-bottom: 1px solid #ffffff;
   }
 
-  .menu-item:last-child:hover
-  {
-    border-bottom:1px solid #fff;
+  .menu-item:last-child:hover {
+    border-bottom: 1px solid #ffffff;
   }
 
   .no-bdr {
