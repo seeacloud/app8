@@ -35,9 +35,9 @@
             </div>
             <div class="sub-menu-content" id="">
               <div class="content-inner" style="border-right:1px solid #eeeeee;">
-                <a class="sub-item" v-for="(pitem,index) in plist" :key="index"
-                   href="products.html#/product/46694cfee788457f8c73bab1ef39120a"
-                   @click.native="flushCom">
+                <a class="sub-item" v-for="(pitem, index) in plist" :key="index"
+                   :href="'products.html#/product/'+pitem.id"
+                   @click="flushCom">
                   {{pitem.title}}
                 </a>
               </div>
@@ -53,20 +53,14 @@
             </div>
           </div>
 
-          <!--$yellow:#EC6600;-->
-          <!--$blue:#3c84fb;-->
-          <!--$green:#85C34A;-->
-          <!--$red:#E03E3E;-->
-          <!--$lightgreen:#6ED19C;-->
-          <!--$lightblue:#5995f8;-->
 
           <!--submenu-solution-->
 
           <div class="sub-menu" v-show="activeSubID=='solution'" id="sub-solution" @mouseleave="mouseleaveSub">
-            <div class="sub-menu-head" style="background:#85C34A;">
+            <div class="sub-menu-head" style="background:#85c34a;">
               <table class="head-table" ref="solutiontable">
                 <tr>
-                  <td >
+                  <td>
                     <i class="iconfont">&#xe64c;</i>
                     <h4>解决方案</h4></td>
                 </tr>
@@ -90,7 +84,7 @@
             <div class="sub-menu-head" style="background:#b34dba;">
               <table class="head-table" ref="casetable">
                 <tr>
-                  <td >
+                  <td>
                     <i class="iconfont">&#xe668;</i>
                     <h4>客户案例</h4></td>
                 </tr>
@@ -110,10 +104,10 @@
           <!--关于莫亚子菜单-->
 
           <div class="sub-menu" v-show="activeSubID=='about'" id="sub-about" @mouseleave="mouseleaveSub">
-            <div class="sub-menu-head" style="background:#EC6600;">
+            <div class="sub-menu-head" style="background:#ec6600;">
               <table class="head-table" ref="abouttable">
                 <tr>
-                  <td >
+                  <td>
                     <i class="iconfont">&#xe606;</i>
                     <h4>关于莫亚</h4></td>
                 </tr>
@@ -230,7 +224,9 @@
           })
       },
       flushCom: function () {
-        this.$router.go(0)
+        window.history.go(0)
+        console.log('flush...')
+
       },
       showSubMenu: function (name) {
         this.activeSubID = name
@@ -507,7 +503,7 @@
       width: 100%;
     }
     td {
-      background:none;
+      background: none;
       padding: 0;
       text-align: center;
       vertical-align: middle;

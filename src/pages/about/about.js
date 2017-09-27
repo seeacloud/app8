@@ -10,6 +10,7 @@ import Router from 'vue-router'
 import Banner from '../../components/Banner.vue'
 import SideMenu from '../../components/SideMenu.vue'
 import ControlBar from '../../components/ControlBar.vue'
+import '../../../static/sidemenu.css'
 
 
 import AboutMoya from './AboutMoya'
