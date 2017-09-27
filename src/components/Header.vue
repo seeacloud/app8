@@ -21,145 +21,113 @@
             <a v-bind:href="item.url" v-bind:class="{active: activeitem==item.name}"
                v-bind:target="item.target" @mouseover="showSubMenu(item.name)" :id="item.name">{{item.title}}</a>
           </li>
-          <div class="sub-menu" id="sub-products" v-show="activeSubID=='products'" @mouseleave="mouseleaveSub" @click="clickSub">
-              <table cellspacing="0" >
-                <tr>
-                  <td rowspan="17" class="sub-menu-head">
-                    <i class="iconfont">&#xe634;</i>
-                    <h4>产品与服务</h4>
-                  </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
+          <div class="sub-menu" id="sub-products" v-show="activeSubID=='products'" @mouseleave="mouseleaveSub"
+               @click="clickSub" ref="subMenuCon">
 
-                  <td class="td-bdr"><span class="sub-head">产品</span></td>
-                  <td><span class="sub-head">服务</span></td>
-                </tr>
+            <div class="sub-menu-head" style="background:#3c84fb;">
+              <table class="head-table" ref="ptable">
                 <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/0" target="_self">山木通·建材家具厂家版</a></td>
-                  <td><a href="products.html#/api/article/7">金蝶系产品实施开发</a></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/1" target="_self">山木通·建材家具门店版</a></td>
-                  <td><a href="products.html#/api/article/8">互联网产品研发</a></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/2" target="_self">山木通·云订货平台</a></td>
-                  <td><a href="products.html#/api/article/9">软件定制开发</a></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/3" target="_self">山木通·云进销存</a></td>
-                  <td><a href="products.html#/api/article/10">IT人力资源服务</a></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/4">产权管理平台</a></td>
-                  <td><a href="price.html" target="_self">服务价格</a></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/5">人力资源管理平台</a></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="td-bdr"><a href="products.html#/api/article/6">物流行业管理平台</a></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
+                  <td style="background:#3c84fb;">
+                    <i class="iconfont">&#xe634;</i>
+                    <h4>产品与服务</h4></td>
                 </tr>
               </table>
+            </div>
+            <div class="sub-menu-content" id="">
+              <div class="content-inner" style="border-right:1px solid #eeeeee;">
+                <a class="sub-item" v-for="(pitem,index) in plist" :key="index"
+                   href="products.html#/product/46694cfee788457f8c73bab1ef39120a"
+                   @click.native="flushCom">
+                  {{pitem.title}}
+                </a>
+              </div>
+            </div>
+            <div class="sub-menu-content">
+              <div class="content-inner">
+                <a class="sub-item" v-for="(sitem, index) in slist" :key="index"
+                   :href="'products.html#/product/'+sitem.id"
+                   @click.native="flushCom">
+                  {{sitem.title}}
+                </a>
+              </div>
+            </div>
           </div>
+
+          <!--$yellow:#EC6600;-->
+          <!--$blue:#3c84fb;-->
+          <!--$green:#85C34A;-->
+          <!--$red:#E03E3E;-->
+          <!--$lightgreen:#6ED19C;-->
+          <!--$lightblue:#5995f8;-->
 
           <!--submenu-solution-->
 
           <div class="sub-menu" v-show="activeSubID=='solution'" id="sub-solution" @mouseleave="mouseleaveSub">
-          <table cellspacing="0" >
-            <tr>
-              <td rowspan="20" class="sub-menu-head">
-                <i class="iconfont">&#xe64c;</i>
-                <h4>解决方案</h4>
-              </td>
-              <td></td>
-            </tr>
+            <div class="sub-menu-head" style="background:#85C34A;">
+              <table class="head-table" ref="solutiontable">
+                <tr>
+                  <td >
+                    <i class="iconfont">&#xe64c;</i>
+                    <h4>解决方案</h4></td>
+                </tr>
+              </table>
+            </div>
+            <div class="sub-menu-content">
+              <div class="content-inner">
+                <a class="sub-item" v-for="(item,index) in solutionlist" :key="index"
+                   :href="'solution.html#/solutions/'+item.id">
+                  {{item.title}}
+                </a>
+              </div>
 
-            <tr>
-              <td><a href="solution.html">EAS HR人事事务单据WEB化解决方案 </a></td>
-            </tr>
-            <tr>
-              <td><a href="solution.html">第三方OA系统与EAS系统集成解决方案</a></td>
-            </tr>
-            <tr>
-              <td><a href="solution.html">物流在线订舱解决方案</a></td>
-            </tr>
-            <tr>
-              <td><a href="solution.html">产权管理系统解决方案</a></td>
-            </tr>
-            <tr>
-              <td class="td-bdr"><a href="solution.html">人力资源管理系统解决方案</a></td>
-            </tr>
-            <tr>
-              <td></td>
-            </tr>
-          </table>
-        </div>
+
+            </div>
+          </div>
 
           <!--客户案例子菜单-->
 
           <div class="sub-menu" v-show="activeSubID=='case'" id="sub-case" @mouseleave="mouseleaveSub">
-            <table cellspacing="0" >
-              <tr>
-                <td rowspan="8" class="sub-menu-head">
-                  <i class="iconfont">&#xe668;</i>
-                  <h4>客户案例</h4>
-                </td>
-              </tr>
-              <tr><td></td></tr>
-              <tr>
-                <td ><a href="case.html#/">合作客户</a></td>
-              </tr>
-              <tr>
-                <td ><a href="case.html#/case">成功案例</a></td>
-              </tr>
+            <div class="sub-menu-head" style="background:#b34dba;">
+              <table class="head-table" ref="casetable">
+                <tr>
+                  <td >
+                    <i class="iconfont">&#xe668;</i>
+                    <h4>客户案例</h4></td>
+                </tr>
+              </table>
 
-              <tr>
-                <td></td>
-              </tr>
-            </table>
+            </div>
+            <div class="sub-menu-content">
+              <div class="content-inner">
+                <a class="sub-item" v-for="(item,index) in caselist" :key="index" :href="'case.html#/case/'+item.id"
+                   @click.native="flushCom">
+                  {{item.title}}
+                </a>
+              </div>
+            </div>
           </div>
 
           <!--关于莫亚子菜单-->
 
           <div class="sub-menu" v-show="activeSubID=='about'" id="sub-about" @mouseleave="mouseleaveSub">
-            <table cellspacing="0" >
-              <tr>
-                <td rowspan="20" class="sub-menu-head">
-                  <i class="iconfont">&#xe606;</i>
-                  <h4>关于莫亚</h4>
-                </td>
-              </tr>
-              <tr><td></td></tr>
-              <tr>
-                <td ><a href="about.html">莫亚概况</a></td>
-              </tr>
+            <div class="sub-menu-head" style="background:#EC6600;">
+              <table class="head-table" ref="abouttable">
+                <tr>
+                  <td >
+                    <i class="iconfont">&#xe606;</i>
+                    <h4>关于莫亚</h4></td>
+                </tr>
+              </table>
 
-              <tr>
-                <td ><a href="about.html#/glory">公司荣誉</a></td>
-              </tr>
-              <tr>
-                <td ><a href="about.html#/culture">公司文化活动</a></td>
-              </tr>
-              <tr>
-                <td ><a href="about.html#/contact">联系我们</a></td>
-              </tr>
-              <tr>
-              <tr>
-                <td ><a href="news.html">公司动态</a></td>
-              </tr>
-              <tr>
-              <td></td>
-              </tr>
-            </table>
+            </div>
+            <div class="sub-menu-content">
+              <div class="content-inner">
+                <a class="sub-item" v-for="(item,index) in aboutlist" :key="index" :href="item.link"
+                   @click.native="flushCom">
+                  {{item.title}}
+                </a>
+              </div>
+            </div>
           </div>
         </ul>
       </div>
@@ -168,18 +136,40 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+  Vue.use(VueResource)
+
   export default{
     name: 'header',
     props: ["activeitem"],
     data (){
       return {
+        plist: '',
+        slist: '',
+        caselist: '',
+        solutionlist: '',
         isActive: false,
         activeSubID: '',
+        aboutlist: [
+          {title: '莫亚概况', link: 'about.html'},
+          {title: '公司荣誉', link: 'about.html#/glory'},
+          {title: '文化活动', link: 'about.html#/culture'},
+          {title: '联系我们', link: 'about.html#/contact'},
+          {title: '公司动态', link: 'news.html'}
+        ],
         logo: './static/img/moya-logo.jpg',
         activeItem: 0,
         items: [
           {title: '首页', url: 'index.html', isActive: false, name: 'index', target: '_self', hasSub: false},
-          {title: '产品与服务', url: 'products.html', isActive: false, name: 'products', target: '_self', hasSub: true},
+          {
+            title: '产品与服务',
+            url: 'products.html#/product/46694cfee788457f8c73bab1ef39120a',
+            isActive: false,
+            name: 'products',
+            target: '_self',
+            hasSub: true
+          },
           {title: '解决方案', url: 'solution.html', isActive: false, name: 'solution', target: '_self', hasSub: true},
           {title: '客户案例', url: 'case.html', isActive: false, name: 'case', target: '_self', hasSub: true},
           {title: '关于莫亚', url: 'about.html', isActive: false, name: 'about', target: '_self', hasSub: true},
@@ -187,21 +177,75 @@
         ]
       }
     },
+    mounted: function () {
+      this.getProduct()
+      this.getService()
+      this.getSolution()
+      this.getCase()
+    },
     methods: {
+      getProduct: function () {
+        this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=6")
+          .then((res) => {
+            this.plist = res.body.data
+            //因为子菜单的单条高度为34px
+            this.$refs.ptable.style.height = this.plist.length * 35 + 20 + 'px'
+
+          })
+          .catch(function (res) {
+
+          })
+      },
+      getService: function () {
+        this.$http.get('http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=7')
+          .then((res) => {
+            this.slist = res.body.data
+//            this.$refs.ptable.style.height = this.plist.length * 35 + 20 + 'px'
+
+          })
+          .catch(function (res) {
+
+          })
+      },
+      getCase: function () {
+        this.$http.get('http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=5')
+          .then((res) => {
+            this.caselist = res.body.data
+            this.$refs.casetable.style.height = this.caselist.length * 35 + 20 + 'px'
+            this.$refs.abouttable.style.height = this.aboutlist.length * 35 + 20 + 'px'
+          })
+          .catch(function (res) {
+
+          })
+      },
+      getSolution: function () {
+        this.$http.get('http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=4')
+          .then((res) => {
+            this.solutionlist = res.body.data
+            this.$refs.solutiontable.style.height = this.solutionlist.length * 35 + 20 + 'px'
+
+          })
+          .catch(function (res) {
+
+          })
+      },
+      flushCom: function () {
+        this.$router.go(0)
+      },
       showSubMenu: function (name) {
         this.activeSubID = name
       },
       mouseleaveSub: function () {
-        this.activeSubID=''
+        this.activeSubID = ''
       },
-      clickSub:function () {
-          this.activeSubID=''
+      clickSub: function () {
+        this.activeSubID = ''
       },
-      onSmt:function () {
-        this.activeSubID=''
+      onSmt: function () {
+        this.activeSubID = ''
       },
-      toIndex:function () {
-        window.open('index.html','_self')
+      toIndex: function () {
+        window.open('index.html', '_self')
       }
     }
   }
@@ -210,60 +254,57 @@
 </script>
 
 <style scoped="true" lang="scss">
+  @import '../../static/base';
+
   $yellow: #ec6600;
 
-  .topband
-  {
+  .topband {
     height: 29px;
     font-size: 12px;
-    border-bottom: 1px solid #eee;
-    color:#999;
+    border-bottom: 1px solid #eeeeee;
+    color: #999999;
   }
-  .sub-head
-  {
+
+  .sub-head {
     line-height: 1.2em;
     border-bottom: 2px solid $yellow;
   }
-  .band-inner
-  {
+
+  .band-inner {
     width: 75%;
     margin: 0 auto;
     min-width: 1200px;
     height: 100%;
     line-height: 30px;
   }
-  .band-content
-  {
+
+  .band-content {
     width: 100%;
     text-align: right;
-    .iconfont
-    {
+    .iconfont {
       font-size: 18px;
       line-height: 30px;
       vertical-align: bottom;
     }
   }
-  .email-link
-  {
-    font-size: 12px;
-    color:inherit;
 
+  .email-link {
+    font-size: 12px;
+    color: inherit;
   }
-  .email-link:hover
-  {
-    color:red;
-    .iconfont
-    {
+
+  .email-link:hover {
+    color: red;
+    .iconfont {
       color: red;
     }
   }
 
-
-  .band-item
-  {
+  .band-item {
     font-size: 12px;
     margin-right: 20px;
   }
+
   .container {
     height: 120px;
     background: #ffffff;
@@ -279,8 +320,6 @@
     height: 90px;
     min-width: 1200px;
   }
-
-
 
   .nav-items {
     float: right;
@@ -347,7 +386,6 @@
     display: inline-block;
     float: right;
     color: #a9263f;
-
   }
 
   .smt-link:after {
@@ -364,96 +402,132 @@
     border-color: red;
   }
 
-
-  .sub-menu
-  {
+  .sub-menu {
     position: absolute;
     top: 90px;
     z-index: 10;
-    background: #fff;
+    background: #ffffff;
     left: -20px;
 
-    td
-    {
+    td {
       padding: 5px 40px;
       text-align: left;
-      background: #fff;
+      background: #ffffff;
     }
-    th
-    {
+    th {
       text-align: left;
       background: #dddddd;
     }
-    a
-    {
+    a {
       font-size: 14px;
       line-height: 24px;
       margin: 0;
     }
   }
 
-  td.sub-menu-head
-  {
-    background: $yellow ;
-    text-align: center ;
+  td.sub-menu-head {
+    background: $yellow;
+    text-align: center;
     vertical-align: middle;
-    width: 150px ;
+    width: 150px;
     padding: 0;
-    i.iconfont
-    {
+    i.iconfont {
       font-size: 48px;
-      color: #fff;
+      color: #ffffff;
     }
-    h4
-    {
-      color: #fff;
+    h4 {
+      color: #ffffff;
       margin: 5px;
     }
   }
-  .td-bdr
-  {
-    border-right: 1px solid #ddd;
+
+  .td-bdr {
+    border-right: 1px solid #dddddd;
   }
 
-  #sub-solution
-  {
+  #sub-solution {
     left: 50px;
-    td.sub-menu-head
-    {
+    td.sub-menu-head {
       background: #3c84fb;
     }
   }
 
-  #sub-case
-  {
+  #sub-case {
     left: 220px;
-    td.sub-menu-head
-    {
+    td.sub-menu-head {
       background: #7bcd65;
     }
   }
 
-  #sub-about
-  {
+  #sub-about {
     left: auto;
     right: 100px;
-    td.sub-menu-head
-    {
+    td.sub-menu-head {
       background: #4bd4e4;
     }
   }
-  @media screen and (max-width:1440px) {
-    .nav-items ul li a
-    {
+
+  @media screen and (max-width: 1440px) {
+    .nav-items ul li a {
       font-size: 20px;
     }
-    .smt-link
-    {
+    .smt-link {
       font-size: 20px;
       height: 32px;
       line-height: 32px;
       border-radius: 16px;
       margin-top: 42px;
     }
+  }
+
+  .sub-menu-head {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    color: #ffffff;
+    float: left;
+    i.iconfont {
+      font-size: 48px;
+    }
+  }
+
+  .head-table {
+    width: 100%;
+    height: 100%;
+    min-width: 120px;
+    i.iconfont {
+      display: inline-block;
+    }
+    h4 {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    tr {
+      width: 100%;
+    }
+    td {
+      background:none;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  .sub-menu-content {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+  }
+
+  .content-inner {
+    padding: 0 20px 0 20px;
+  }
+
+  .sub-item {
+    display: block !important;
+    height: 35px;
+    line-height: 35px;
+    color: #666666;
   }
 </style>

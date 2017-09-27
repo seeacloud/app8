@@ -23,7 +23,7 @@ Vue.use(Router)
 
 const routes = [
   {path: '/', name: 'Clients', component: Clients},
-  {path: '/case', name: 'CaseGroup', component: CaseGroup},
+  {path: '/casegroup', name: 'CaseGroup', component: CaseGroup},
   // {path:'/evaluation',name:'Evaluation', component:Evaluation},
   {path: '/case/:id', component: CaseDetail}
 ]
@@ -38,8 +38,8 @@ new Vue({
   components: {HeaderItem, FooterItem, Banner, SideMenu, ControlBar, Clients, CaseGroup, Evaluation, CaseDetail},
   data: {
     linkary: [
-      {title: '合作客户', url: '/'},
-      {title: '成功案例', url: '/case'}
+      {title: '合作客户', url: '/clients'},
+      {title: '成功案例', url: '/prodcut'}
     ]
   }
 })

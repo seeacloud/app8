@@ -21,7 +21,7 @@ Vue.use(Router)
 Vue.use(VueResource)
 
 const routes = [
-  // {path:'/',name:'Smt', component:Smt},
+  {path:'/',name:'productDetail', component:ProductDetail},
   // {path:'/chanq',name:'Chanq',component:Chanq},
   // {path:'/api/article/:id',name:'kingdee', component:ArticleTemplate},
   {path: '/product/:id', component: ProductDetail}
@@ -38,22 +38,7 @@ new Vue({
   components: {HeaderItem, FooterItem, Banner, SideMenu, ControlBar, ArticleTemplate, ProductDetail},
   data: {
     productList:'',
-    serviceList:'',
-    linkary: [
-      {title: '山木通·建材家具厂家版', url: '/product/3.6219736616337408E17'},
-      {title: '山木通·建材家具门店版', url: '/product/3.6220280804212736E17'},
-      {title: '山木通·云订货平台', url: '/product/2'},
-      {title: '山木通·云进销存', url: '/product/3'},
-      {title: '产权管理系统', url: '/product/4'},
-      {title: '人力资源管理系统', url: '/product/5'},
-      {title: '物流行业管理系统', url: '/product/6'}
-    ],
-    linkary2: [
-      {title: '金蝶系产品实施开发', url: '/product/7'},
-      {title: '互联网产品研发', url: '/product/8'},
-      {title: '软件定制开发', url: '/product/9'},
-      {title: 'IT人力资源服务', url: '/product/10'}
-    ]
+    serviceList:''
   },
   mounted:function () {
     this.getProduct()

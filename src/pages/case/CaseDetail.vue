@@ -5,7 +5,7 @@
     <div v-html="casecontent.htmlcontent"></div>
 
 
-    <router-link to="/case" class="link-back">返回</router-link>
+    <router-link to="/casegroup" class="link-back">返回</router-link>
 
   </div>
 </template>

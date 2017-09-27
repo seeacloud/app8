@@ -1,7 +1,7 @@
 <template>
-  <div class="article-con">
+  <div class="article-con" v-cloak>
     <h2 class="news-title">{{news.title}}</h2>
-    <div class="author">发布时间： <span>{{news.pdate}}</span> 发布者： <span>{{news.author}}</span></div>
+    <div class="author" v-cloak>发布时间： <span>{{news.pdate}}</span> 发布者： <span>{{news.author}}</span></div>
     <div v-html="news.htmlcontent"></div>
     <!--<router-link to="/" class="back-btn">返回</router-link>-->
   </div>
@@ -43,7 +43,10 @@
 
 <style lang='scss' scoped>
   @import "../../../static/base";
-
+[v-cloak]
+{
+  display:none !important;
+}
   .news-title {
     color: #333333;
     text-align: center;

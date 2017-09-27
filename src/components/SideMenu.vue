@@ -3,7 +3,8 @@
     <div class="menu-head">
       {{headtitle}}
     </div>
-    <router-link v-for="(item, index) in links" :to="'/product/'+item.id" class="menu-item" :key="index">
+    <router-link v-for="(item, index) in links" :to="'/product/'+item.id" class="menu-item" :key="index"
+                 @click.native="flushCom">
       <div>
         {{item.title}}<i class="el-icon-arrow-right"></i>
       </div>
@@ -17,6 +18,11 @@
     props: ['headtitle', 'links'],
     data (){
       return {}
+    },
+    methods: {
+      flushCom: function () {
+        this.$router.go(0)
+      }
     }
   }
 </script>
