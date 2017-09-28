@@ -26,9 +26,9 @@
             {url:'./static/img/smt-banner.jpg', title:'山木通·云平台',
               des:'山木通是国内第一款专门为木业加工及家具制造企业量身定制的全流程管控软件，让您轻松管理生产、库存、销售、订单、资金等各个环节。',
               btn:'了解更多',link:'http://www.shanmt.com',captionLeft:true},
-            {url:'./static/img/kingdeeDev.jpg',title:'金蝶系产品实施开发',des:'莫亚科技是金蝶集团金牌合作伙伴，在金蝶系产品的实施与开发方面有着丰富的经验',btn:'了解详情', link:'http://localhost:8080/products.html#/api/article/7',captionLeft:true},
-            {url:'./static/img/dev-banner.jpg',title:'软件定制开发',des:'莫亚科技专业从事企业软件定制开发和技术服务，经过多年的发展，积累了众多不同行业的管理方式和经验',btn:'了解详情',link:'http://localhost:8080/products.html#/api/article/9', captionLeft:true},
-            {url:'./static/img/sinqx.jpg',title:'新企学IT培训',des:'所学课程都是按市场及企业需求量身定制，志在提升学员的实践能力，培养高端的IT人才',btn:'了解详情', captionLeft:true}
+            {url:'./static/img/kingdeeDev.jpg',title:'金蝶系产品实施开发',des:'莫亚科技是金蝶集团金牌合作伙伴，在金蝶系产品的实施与开发方面有着丰富的经验',btn:'了解详情', link:'products.html#/product/3.6265617745824973E17',captionLeft:true},
+            {url:'./static/img/dev-banner.jpg',title:'软件定制开发',des:'莫亚科技专业从事企业软件定制开发和技术服务，经过多年的发展，积累了众多不同行业的管理方式和经验',btn:'了解详情',link:'products.html#/product/3.6265628902673613E17', captionLeft:true},
+            {url:'./static/img/sinqx.jpg',title:'新企学IT培训',des:'所学课程都是按市场及企业需求量身定制，志在提升学员的实践能力，培养高端的IT人才', link: 'http://www.sinqx.com',btn:'了解详情', captionLeft:true}
 
           ]
       }

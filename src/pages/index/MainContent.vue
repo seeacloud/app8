@@ -80,28 +80,28 @@
         <div class="con-left">
           <div class="des-wrap">
             <h1>产权管理系统</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <p>从出资人角度，以资本为纽带，以信息技术为依托，对各级产权进行全系统流程化的分级管控；明晰产权隶属关系，直观反映网状产权关系，记录历史产权隶属关系；提供投资收益信息的记录功能，全面统计企业的投资收益情况。</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
         </div>
         <div class="con-right">
-          <img src="../../../static/img/iphonemac.jpg" alt=""/>
+          <img src="../../../static/img/chanq-mac.jpg" alt=""/>
         </div>
       </div>
 
 
-      <div v-show="activeItem=='hr'" class="p-item" id="p-hr">
+      <div v-show="activeItem=='kaoq'" class="p-item" id="p-kaoq">
         <div class="con-left">
           <div class="des-wrap">
-            <h1>人力资源管理系统</h1>
-            <p>山木通平台与目前国内最领先的云计算服务提供商(阿里 云)战略合作 ，提供高可靠的数据安全保障服务，SaaS平台是目前主流的技 术服务提供方 式，是软件科技发展的最新趋势。</p>
+            <h1>山木通·云考勤 </h1>
+            <p>山木通云考勤是建立在云计算基础之上的全新考勤服务平台，能够平滑跨越互联网，覆盖PC互联网和移动互联网，整合企业信息化应用的核心要素： 计算、存储、网络、终端，面向各类企业用户，提供整体个性化考勤服务。</p>
             <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
           </div>
 
         </div>
         <div class="con-right">
-          <img src="../../../static/img/iphonemac.jpg" alt=""/>
+          <img src="../../../static/img/kaoq.jpg" alt=""/>
         </div>
       </div>
 
@@ -246,7 +246,7 @@
           {title: '山木通·云订货平台', name: 'smt-order'},
           {title: '山木通·云进销存', name: 'smt-jxc'},
           {title: '产权管理系统', name: 'chanq'},
-          {title: '人力资源管理系统', name: 'hr'}
+          {title: '山木通·云考勤 ', name: 'kaoq'}
         ],
         bandrows: [
           [{url: 'huaw.jpg'}, {url: 'kingdee.jpg'}, {url: 'wank.jpg'}, {url: 'baijc.jpg'}, {url: 'guanz.jpg'}, {url: 'henglwl.jpg'},],

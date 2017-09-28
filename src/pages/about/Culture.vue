@@ -20,21 +20,14 @@
         data (){
             return {
                 imgs:[
+                  {url:'./static/img/culture/moya-1.jpeg'},
+                  {url:'./static/img/culture/moya-2.jpeg'},
+                  {url:'./static/img/culture/moya-3.jpeg'},
+                  {url:'./static/img/culture/moya-4.jpeg'},
+                  {url:'./static/img/culture/moya-5.jpeg'},
+                  {url:'./static/img/culture/moya-7.jpeg'},
                   {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'},
-                  {url:'./static/img/culture/moya1.jpg'}
+                  {url:'./static/img/culture/moya-6.jpeg'}
                 ]
             }
         }

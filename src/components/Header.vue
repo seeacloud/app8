@@ -37,7 +37,7 @@
               <div class="content-inner" style="border-right:1px solid #eeeeee;">
                 <a class="sub-item" v-for="(pitem, index) in plist" :key="index"
                    :href="'products.html#/product/'+pitem.id"
-                   @click="flushCom">
+                   @click="gotopage('products.html#/product/'+pitem.id, $event)">
                   {{pitem.title}}
                 </a>
               </div>
@@ -46,7 +46,7 @@
               <div class="content-inner">
                 <a class="sub-item" v-for="(sitem, index) in slist" :key="index"
                    :href="'products.html#/product/'+sitem.id"
-                   @click.native="flushCom">
+                   @click="gotopage('products.html#/product/'+sitem.id, $event)">
                   {{sitem.title}}
                 </a>
               </div>
@@ -68,8 +68,9 @@
             </div>
             <div class="sub-menu-content">
               <div class="content-inner">
-                <a class="sub-item" v-for="(item,index) in solutionlist" :key="index"
-                   :href="'solution.html#/solutions/'+item.id">
+                <a class="sub-item" v-for="(item, index) in solutionlist" :key="index"
+                   :href="'solution.html#/solutions/'+item.id"
+                   @click="gotopage('solution.html#/solutions/'+item.id, $event)">
                   {{item.title}}
                 </a>
               </div>
@@ -94,7 +95,7 @@
             <div class="sub-menu-content">
               <div class="content-inner">
                 <a class="sub-item" v-for="(item,index) in caselist" :key="index" :href="'case.html#/case/'+item.id"
-                   @click.native="flushCom">
+                   @click="gotopage('case.html#/case/'+item.id, $event)">
                   {{item.title}}
                 </a>
               </div>
@@ -178,6 +179,13 @@
       this.getCase()
     },
     methods: {
+      gotopage: function (url, evt) {
+        console.log('evt target:', evt.target.href)
+        evt.target.href = url
+        window.location.assign(url)
+        window.location.reload()
+
+      },
       getProduct: function () {
         this.$http.get("http://112.124.2.247:88/mysite/ots/getNews?limit=20&type=6")
           .then((res) => {

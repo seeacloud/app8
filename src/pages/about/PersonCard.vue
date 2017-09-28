@@ -45,6 +45,7 @@
   {
     text-align: center;
     font-weight: normal;
+    margin: 15px 0 5px 0;
   }
 
   .p-info
@@ -53,6 +54,8 @@
     line-height: 1.5em;
     color: #666;
     text-align: justify;
+    text-align: center;
+    margin: 0 0 40px 0;
   }
 
 </style>
