@@ -27,7 +27,7 @@
           <div class="des-wrap">
             <h1>山木通·建材家具厂家版</h1>
             <p>山木通团队结合多年丰富的行业管理经验，充分考虑企业的特点，为家具、家居、建材、木业加工生产企业量身定制，解决企业核心管理问题，提供最符合家具、家居、建材、木业加工生产企业的全流程解决方案。</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/3.6219736616337408E17" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>
@@ -40,7 +40,7 @@
           <div class="des-wrap">
             <h1>山木通·建材家具门店版</h1>
             <p>通过山木通门店版一键即可完成销售开单,厂家订货,即时生成应收款、应付款、毛利润等经营报表,库存智能管理,云端存储数据;电脑手机全支持，指尖上办公，让各环节工作从此化繁为简是店铺可靠的智能伙伴。</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/3.6220280804212736E17" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>
@@ -53,7 +53,7 @@
           <div class="des-wrap">
             <h1>山木通·云订货平台</h1>
             <p>智能、高效的订货管理系统，全面提升订货效率，可一键完成销售开单,厂家订货,即时生成应收款、应付款、毛利润等经营报表,库存智能管理,云端存储数据，十八般武艺，样样精通</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/46694cfee788457f8c73bab1ef39120a" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>
@@ -66,7 +66,7 @@
           <div class="des-wrap">
             <h1>山木通·云进销存</h1>
             <p>支持多种行业，满足各行各业的需求，服装鞋帽，建材家具多属性支持，全面提升管理水平；智能补货，自动报表生成，生意轻松搞定</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/bdbc20e570234d09b31be26f93b3c2da" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>
@@ -81,7 +81,7 @@
           <div class="des-wrap">
             <h1>产权管理系统</h1>
             <p>从出资人角度，以资本为纽带，以信息技术为依托，对各级产权进行全系统流程化的分级管控；明晰产权隶属关系，直观反映网状产权关系，记录历史产权隶属关系；提供投资收益信息的记录功能，全面统计企业的投资收益情况。</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/421221205d3947979f0630134d31e2f5" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>
@@ -96,7 +96,7 @@
           <div class="des-wrap">
             <h1>山木通·云考勤 </h1>
             <p>山木通云考勤是建立在云计算基础之上的全新考勤服务平台，能够平滑跨越互联网，覆盖PC互联网和移动互联网，整合企业信息化应用的核心要素： 计算、存储、网络、终端，面向各类企业用户，提供整体个性化考勤服务。</p>
-            <a href="http://www.shanmt.com" class="round-btn" target="_blank">了解更多</a>
+            <a href="products.html#/product/3.6295694413201408E17" class="round-btn" target="_self">了解更多</a>
           </div>
 
         </div>

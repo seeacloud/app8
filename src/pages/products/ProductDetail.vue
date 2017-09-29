@@ -20,7 +20,15 @@
         news: ''
       }
     },
+    watch: {
+      '$route'(to, from){
+        this.articleId = this.$route.params.id
+        this.getnews(this.$route.params.id)
+        window.scrollTo(0, 0)
+      }
+    },
     mounted: function () {
+      window.scrollTo(0, 0)
       this.articleid = this.$route.params.id
       console.log('articleid is:', this.articleid)
       this.getnews(this.$route.params.id)
@@ -29,9 +37,9 @@
     methods: {
       getnews: function (newsId) {
         this.$http.get('http://112.124.2.247:88/mysite/ots/getNewById?id=' + newsId)
-          .then((res)=>{
+          .then((res) => {
 //            console.log(res.body)
-            this.news=res.body.data
+            this.news = res.body.data
           })
           .catch(function (res) {
 //            console.log(res)
@@ -43,10 +51,11 @@
 
 <style lang='scss' scoped>
   @import "../../../static/base";
-[v-cloak]
-{
-  display:none !important;
-}
+
+  [v-cloak] {
+    display: none !important;
+  }
+
   .news-title {
     color: #333333;
     text-align: center;
