@@ -180,10 +180,10 @@
     },
     methods: {
       gotopage: function (url, evt) {
-        console.log('evt target:', evt.target.href)
-        evt.target.href = url
-        window.location.assign(url)
-        window.location.reload()
+//        console.log('evt target:', evt.target.href)
+//        evt.target.href = url
+//        window.location.assign(url)
+//        window.location.reload()
 
       },
       getProduct: function () {

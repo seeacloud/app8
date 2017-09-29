@@ -20,12 +20,21 @@
         solution: ''
       }
     },
+    watch: {
+      '$route'(to, from){
+        this.getSolution(this.$route.params.id)
+//        this.articleId = this.$route.params.id
+//        this.getnews(this.$route.params.id)
+        window.scrollTo(0, 0)
+
+      }
+    },
     methods: {
       getSolution: function (sId) {
         this.$http.get('http://112.124.2.247:88/mysite/ots/getNewById?id=' + sId)
           .then((res) => {
             this.solution = res.body.data
-            console.log('solution is:,' ,this.solution)
+            console.log('solution is:,', this.solution)
           })
           .catch(function (res) {
           })

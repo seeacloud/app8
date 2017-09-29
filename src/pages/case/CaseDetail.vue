@@ -32,6 +32,15 @@
         caseId: ''
       }
     },
+    watch: {
+      '$route'(to, from){
+//        this.articleId = this.$route.params.id
+//        this.getnews(this.$route.params.id)
+        window.scrollTo(0, 0)
+        this.caseId = this.$route.params.id
+        this.getCaseContent(this.caseId)
+      }
+    },
     mounted: function () {
       this.caseId = this.$route.params.id
       this.getCaseContent(this.caseId)
